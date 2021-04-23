@@ -1,7 +1,7 @@
 # Личный проект «Седона» 
 
 * Студент: [Daria Selezneva](https://up.htmlacademy.ru/adaptive/22/user/1702695).
-* Наставник: `Неизвестно`.
+* Наставник: [Алексей Елькин] (https://htmlacademy.ru/profile/alex_elkin).
 
 ---
 
