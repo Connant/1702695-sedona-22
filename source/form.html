@@ -16,7 +16,7 @@
       <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
       <ul class="main-nav-list">
         <li class="main-nav__item"><a href="index.html">Главная</a></li>
-        <li class="main-nav__item"><a href="#">Фото и видео</a></li>
+        <li class="main-nav__item"><a href="catalog.html">Фото и видео</a></li>
         <li class="main-nav__item"><a href="form.html">Форма отзыва</a></li>
         <li class="main-nav__item"><a href="https://htmlacademy.ru/study">HTML ACADEMY</a></li>
       </ul>
@@ -46,23 +46,23 @@
           <ul class="main-page__content-form-list">
             <li class="main-page__content-form-item">
               <label class="main-page__content-form-label form-label" for="name">
-                <p class="main-page__content-form-item-sub-tittle">Имя*:</p>
-                <input class="main-page__content-form-input form-input" type="text" name="name" id="name" value="Петр"
+                <span class="main-page__content-form-item-sub-tittle">Имя*:</span>
+                <input class="main-page__content-form-input form-input" type="text" name="name" id="name" placeholder="Петр"
                   required />
               </label>
             </li>
             <li class="main-page__content-form-item">
               <label class="main-page__content-form-label form-label" for="last-name">
-                <p class="main-page__content-form-item-sub-tittle">Фамилия*:</p>
+                <span class="main-page__content-form-item-sub-tittle">Фамилия*:</span>
                 <input class="main-page__content-form-input form-input" type="text" name="last-name" id="last-name"
-                  value="Иванов" required />
+                placeholder="Иванов" required />
               </label>
             </li>
             <li class="main-page__content-form-item">
               <label class="main-page__content-form-label form-label" for="patronymic">
-                <p class="main-page__content-form-item-sub-tittle">Отчество:</p>
+                <span class="main-page__content-form-item-sub-tittle">Отчество:</span>
                 <input class="main-page__content-form-input form-input" type="text" name="patronymic" id="patronymic"
-                  value="Александрович" />
+                placeholder="Александрович" />
               </label>
             </li>
           </ul>
@@ -73,16 +73,16 @@
           <ul class="main-page__content-form-list">
             <li class="main-page__content-form-item">
               <label class="main-page__content-form-label form-label" for="number">
-                <p class="main-page__content-form-item-sub-tittle">Контактный номер*:</p>
-                <input class="main-page__content-form-input form-input" type="text" name="number" id="number "
-                  value="Введите телефон" required />
+                <span class="main-page__content-form-item-sub-tittle">Контактный номер*:</span>
+                <input class="main-page__content-form-input form-input" type="text" name="number" id="number"
+                placeholder="Введите телефон" required />
               </label>
             </li>
             <li class="main-page__content-form-item">
               <label class="main-page__content-form-label form-label" for="e-mail">
-                <p class="main-page__content-form-item-sub-tittle">Электронная почта*:</p>
+                <span class="main-page__content-form-item-sub-tittle">Электронная почта*:</span>
                 <input class="main-page__content-form-input form-input" type="text" name="e-mail" id="e-mail"
-                  value="Введите e-mail" required />
+                placeholder="Введите e-mail" required />
               </label>
             </li>
           </ul>
@@ -91,17 +91,17 @@
         <fieldset class="main-page__content-form__impression">
           <h3 class="main-page__content-form-title">Ваше общее впечатление:</h3>
           <ul class="main-page__content-form-list">
-            <li class="main-page__content-form-item item__choice">
+            <li class="main-page__content-form-item">
               <input class="main-page__content-form__choice-input" type="radio" name="radio" value="positive"
                 id="positive" checked />
               <label class="main-page__content-form__choice-label" for="positive">Скорее положительное</label>
             </li>
-            <li class="main-page__content-form-item item__choice">
+            <li class="main-page__content-form-item">
               <input class="main-page__content-form__choice-input" type="radio" name="radio" value="negative"
                 id="negative" />
               <label class="main-page__content-form__choice-label" for="negative">Скорее отрицательное</label>
             </li>
-            <li class="main-page__content-form-item item__choice">
+            <li class="main-page__content-form-item">
               <input class="main-page__content-form__choice-input" type="radio" name="radio" value="unsure"
                 id="unsure" />
               <label class="main-page__content-form__choice-label" for="unsure">Затрудняюсь ответить</label>
@@ -137,7 +137,7 @@
         <fieldset class="main-page__content-form__emotions">
           <h3 class="main-page__content-form-title">Опишите свои эмоции:</h3>
           <textarea class="main-page__content-form-text" id="emotions" name="emotions"
-            value="Опишите подробно все ваши восторги"></textarea>
+          placeholder="Опишите подробно все ваши восторги"></textarea>
         </fieldset>
 
         <div class="main-page__content-form__submit">
