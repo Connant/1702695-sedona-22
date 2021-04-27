@@ -1,0 +1,42 @@
+.search {
+  position: relative;
+  padding: 58px 0 87px;
+}
+
+.search__title {
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 26px;
+}
+
+.search p {
+  width: 435px;
+  padding: 40px 0 65px 0;
+  margin: 0 auto;
+  line-height: 24px;
+}
+
+.search__button {
+  padding: 20px 131px;
+  font-size: 21px;
+  line-height: 26px;
+  background-color: @accent-color;
+
+    &:hover {
+      background-color: @accent-hover;
+    }
+
+    &:focus{
+      background-color: @accent-hover;
+    }
+
+    &:active {
+      color: @basic-white-03;
+      background-color: @accent-active;
+    }
+
+    &:disabled {
+      color: @basic-white;
+      background-color: @input-active;
+    }
+}

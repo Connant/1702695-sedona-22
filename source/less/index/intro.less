@@ -1,0 +1,26 @@
+.main-page__intro {
+  position: relative;
+  height: 509px;
+  background-color: var(--background-img-index);
+  background-image: url(../img/index/desktop/back-desktop.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.main-page__intro img {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 78px;
+}
+
+.main-page__intro::after {
+  position: absolute;
+  width: 100%;
+  bottom: -1px;
+  height: 57px;
+  left: 0;
+  content: "";
+  background-image: url(../img/index/desktop/mask.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}

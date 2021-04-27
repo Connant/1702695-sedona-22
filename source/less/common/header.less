@@ -1,0 +1,49 @@
+.page-header {
+  width: 100%;
+}
+
+.main-nav-logo {
+  position: absolute;
+  left: 50%;
+  z-index: 2;
+}
+
+.main-nav-list {
+  margin: 0;
+  padding: 14px 76px 14px 55px;
+  list-style-type: none;
+}
+
+.main-nav__item {
+  width: 20%;
+  display: inline;
+  font-weight: bold;
+  line-height: 24px;
+  list-style-type: none;
+}
+
+.main-nav__item a {
+  outline: none;
+  color: @basic-black;
+
+    &:hover {
+      color: @accent-color;
+    }
+
+    &:focus {
+      color: @accent-color;
+    }
+
+    &:active {
+      color: @basic-black-03;
+    }
+}
+
+
+.main-nav__toggle {
+  display: none;
+  position: absolute;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
