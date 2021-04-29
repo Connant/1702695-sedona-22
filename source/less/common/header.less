@@ -9,34 +9,55 @@
 }
 
 .main-nav-list {
-  margin: 0;
-  padding: 14px 76px 14px 55px;
+  // маргин снизу потом уберу, пока так просто удобнее верстать
+  margin: 0 0 20px 0;
+  padding: 0;
   list-style-type: none;
 }
 
 .main-nav__item {
-  width: 20%;
-  display: inline;
   font-weight: bold;
-  line-height: 24px;
+  font-size: 18px;
+  line-height: 40px;
   list-style-type: none;
+  background-color: @accent-color;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 50%), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+
+  &:hover {
+    background-color: @accent-hover;
+  }
+
+  &:focus {
+    background-color: @accent-hover;
+  }
+
+  &:active {
+    color: @basic-white-03;
+    background-color: @accent-active;
+  }
+}
+
+.main-nav__item:last-of-type {
+  // не понимаю, почему это не работает ._.
+  box-shadow: inset 0 7px 0 linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%);
 }
 
 .main-nav__item a {
   outline: none;
-  color: @basic-black;
+  color: @basic-white;
 
-    &:hover {
-      color: @accent-color;
-    }
+  &:hover {
+    color: @accent-color;
+  }
 
-    &:focus {
-      color: @accent-color;
-    }
+  &:focus {
+    color: @accent-color;
+  }
 
-    &:active {
-      color: @basic-black-03;
-    }
+  &:active {
+    color: @basic-white-03;
+    background-color: @accent-active;
+  }
 }
 
 
