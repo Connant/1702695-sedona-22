@@ -1,0 +1,108 @@
+
+.page__content {
+  margin-top: 36px;
+}
+
+.form-page__intro-title {
+  padding: 0 8px;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.form-page__intro-content {
+  // точный отступ сверзу потом по пиксель перыекту подгоню
+  padding: 10px 8px 0;
+  line-height: 24px;
+  color: @basic-dark;
+}
+
+.form-block {
+  margin: 0;
+  border: none;
+  border-top: 1px solid @input-active;
+}
+
+.list-item {
+  list-style: none;
+}
+
+.form-list {
+  text-align: start;
+  padding: 0 0 15px 20px;
+  margin: 0;
+}
+
+// наверное, лучше задать им какой-то общий класс?..
+.form__name--title,
+.form-contacts__title,
+.form__impression--title,
+.form__location--title,
+.form__emotions--title {
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.form__impression-list__label,
+.form__location-list__label {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: bold;
+  text-transform: none;
+}
+
+.form__name-list__item--sub-tittle,
+.form-contacts-list__item--sub-tittle {
+  line-height: 26px;
+  color: @basic-dark;
+}
+
+.form__emotions--text {
+  width: 235px;
+  height: 118px;
+  padding: 13px 23px 29px 21px;
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: bold;
+  border: none;
+  background-color: @basic-grey;
+  color: @basic-black;
+}
+
+.form-input {
+  font-family: inherit;
+  border: none;
+  background-color: @basic-grey;
+  color: @basic-black;
+}
+
+.form__submit {
+  padding: 51px 0 0;
+}
+
+.form__button {
+  width: 280px;
+  height: 58px;
+  // padding: 20px 131px;
+  font-size: 21px;
+  line-height: 26px;
+  background-color: @accent-color;
+
+  &:hover {
+    background-color: @accent-hover;
+  }
+
+  &:focus {
+    background-color: @accent-hover;
+  }
+
+  &:active {
+    color: @basic-white-03;
+    background-color: @accent-active;
+  }
+
+  &:disabled {
+    color: @basic-white;
+    background-color: @input-active;
+  }
+}

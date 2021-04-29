@@ -9,10 +9,11 @@
 
 <body class="page-body">
 
+  <div class="page-wrapper">
   <header class="page-header">
     <nav class="main-nav">
       <a>
-        <img class="main-nav__logo" src="./img/header/logo-desktop.svg" width="187" height="97"
+        <img class="main-nav__logo" src="./img/form/logo-mobile.svg" width="187" height="97"
           alt="Логотип сайта Седоны">
       </a>
       <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
@@ -25,125 +26,126 @@
     </nav>
   </header>
 
-  <main class="main-page">
+  <main class="form-page">
 
     <h1 class="visually-hidden">Страница формы отзыва</h1>
 
-    <div class="main-page__into">
-      <img src="https://via.placeholder.com/320x214" alt="Добро пожаловать в Седону" width="320" height="214" />
-      <h2 class="main-page__intro-title">Оставьте свой отзыв</h2>
-      <p class="main-page__intro-content">
+    <div class="form-page__intro">
+      <img src="./img/form/text-sedona.svg" alt="Добро пожаловать в Седону" width="229" height="39" />
+
+    </div>
+
+    <section class="form-page__content page__content">
+      <h2 class="form-page__intro-title">Оставьте свой отзыв</h2>
+      <p class="form-page__intro-content">
         Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о
         посещенных вами достопримечательностях
       </p>
-    </div>
-
-    <section class="main-page__content">
       <h2 class="visually-hidden">Форма озыва</h2>
 
-      <form class="main-page__content-form" action="https://echo.htmlacademy.ru" method="POST">
+      <form class="form" action="https://echo.htmlacademy.ru" method="POST">
 
-        <fieldset class="main-page__content-form__name">
-          <h3 class="main-page__content-form-title">Представьтесь:</h3>
-          <ul class="main-page__content-form-list">
-            <li class="main-page__content-form-item">
-              <label class="main-page__content-form-label form-label" for="name">
-                <span class="main-page__content-form-item-sub-tittle">Имя*:</span>
-                <input class="main-page__content-form-input form-input" type="text" name="name" id="name" placeholder="Петр"
+        <fieldset class="form__name form-block">
+          <h3 class="form__name--title">Представьтесь:</h3>
+          <ul class="form__name-list form-list">
+            <li class="form__name-list__item list-item">
+              <label class="form__name-list__item--label form-label" for="name">
+                <span class="form__name-list__item--sub-tittle">Имя*:</span>
+                <input class="form__name-list__item--input form-input" type="text" name="name" id="name" placeholder="Петр"
                   required />
               </label>
             </li>
-            <li class="main-page__content-form-item">
-              <label class="main-page__content-form-label form-label" for="last-name">
-                <span class="main-page__content-form-item-sub-tittle">Фамилия*:</span>
-                <input class="main-page__content-form-input form-input" type="text" name="last-name" id="last-name"
+            <li class="form__name-list__item list-item">
+              <label class="form__name-list__item--label form-label" for="last-name">
+                <span class="form__name-list__item--sub-tittle">Фамилия*:</span>
+                <input class="form__name-list__item--input form-input" type="text" name="last-name" id="last-name"
                 placeholder="Иванов" required />
               </label>
             </li>
-            <li class="main-page__content-form-item">
-              <label class="main-page__content-form-label form-label" for="patronymic">
-                <span class="main-page__content-form-item-sub-tittle">Отчество:</span>
-                <input class="main-page__content-form-input form-input" type="text" name="patronymic" id="patronymic"
+            <li class="form__name-list__item list-item">
+              <label class="form__name-list__item--label form-label" for="patronymic">
+                <span class="form__name-list__item--sub-tittle">Отчество:</span>
+                <input class="form__name-list__item--input form-input" type="text" name="patronymic" id="patronymic"
                 placeholder="Александрович" />
               </label>
             </li>
           </ul>
         </fieldset>
 
-        <fieldset class="main-page__content-form__contacts">
-          <h3 class="main-page__content-form-title">Контактная информация::</h3>
-          <ul class="main-page__content-form-list">
-            <li class="main-page__content-form-item">
-              <label class="main-page__content-form-label form-label" for="number">
-                <span class="main-page__content-form-item-sub-tittle">Контактный номер*:</span>
-                <input class="main-page__content-form-input form-input" type="text" name="number" id="number"
+        <fieldset class="form-contacts form-block">
+          <h3 class="form-contacts--title">Контактная информация:</h3>
+          <ul class="form-contacts-list form-list">
+            <li class="form-contacts-list__item list-item">
+              <label class="form-contacts-list__item--label form-label" for="number">
+                <span class="form-contacts-list__item--sub-tittle">Контактный номер*:</span>
+                <input class="form-contacts-list__item--input form-input" type="text" name="number" id="number"
                 placeholder="Введите телефон" required />
               </label>
             </li>
-            <li class="main-page__content-form-item">
-              <label class="main-page__content-form-label form-label" for="e-mail">
-                <span class="main-page__content-form-item-sub-tittle">Электронная почта*:</span>
-                <input class="main-page__content-form-input form-input" type="text" name="e-mail" id="e-mail"
+            <li class="form-contacts-list__item list-item">
+              <label class="form-contacts-list__item--label form-label" for="e-mail">
+                <span class="form-contacts-list__item--sub-tittle">Электронная почта*:</span>
+                <input class="form-contacts-list__item--input form-input" type="text" name="e-mail" id="e-mail"
                 placeholder="Введите e-mail" required />
               </label>
             </li>
           </ul>
         </fieldset>
 
-        <fieldset class="main-page__content-form__impression">
-          <h3 class="main-page__content-form-title">Ваше общее впечатление:</h3>
-          <ul class="main-page__content-form-list">
-            <li class="main-page__content-form-item">
-              <input class="main-page__content-form__choice-input" type="radio" name="radio" value="positive"
+        <fieldset class="form__impression form-block">
+          <h3 class="form__impression--title">Ваше общее впечатление:</h3>
+          <ul class="form__impression-list form-list">
+            <li class="form__impression-list__item list-item">
+              <input class="form__impression-list__input" type="radio" name="radio" value="positive"
                 id="positive" checked />
-              <label class="main-page__content-form__choice-label" for="positive">Скорее положительное</label>
+              <label class="form__impression-list__label" for="positive">Скорее положительное</label>
             </li>
-            <li class="main-page__content-form-item">
-              <input class="main-page__content-form__choice-input" type="radio" name="radio" value="negative"
+            <li class="form__impression-list__item list-item">
+              <input class="form__impression-list__input" type="radio" name="radio" value="negative"
                 id="negative" />
-              <label class="main-page__content-form__choice-label" for="negative">Скорее отрицательное</label>
+              <label class="form__impression-list__label" for="negative">Скорее отрицательное</label>
             </li>
-            <li class="main-page__content-form-item">
-              <input class="main-page__content-form__choice-input" type="radio" name="radio" value="unsure"
+            <li class="form__impression-list__item list-item">
+              <input class="form__impression-list__input" type="radio" name="radio" value="unsure"
                 id="unsure" />
-              <label class="main-page__content-form__choice-label" for="unsure">Затрудняюсь ответить</label>
+              <label class="form__impression-list__label" for="unsure">Затрудняюсь ответить</label>
             </li>
           </ul>
         </fieldset>
 
-        <fieldset class="main-page__content-form__location">
-          <h3 class="main-page__content-form-title">Посещенные достопримечательности:</h3>
-          <ul class="main-page__content-form-list">
-            <li class="main-page__content-form__checkbox">
-              <input class="main-page__content-form__checkbox-input" type="checkbox" name="devil-bridge"
+        <fieldset class="form__location form-block">
+          <h3 class="form__location--title">Посещенные достопримечательности:</h3>
+          <ul class="form__location-list form-list">
+            <li class="form__location-list__item list-item">
+              <input class="form__location-list__input" type="checkbox" name="devil-bridge"
                 id="devil-bridge" checked />
-              <label class="main-page__content-form__checkbox-label" for="devil-bridge">Мост Дьявола</label>
+              <label class="form__location-list__label" for="devil-bridge">Мост Дьявола</label>
             </li>
-            <li class="main-page__content-form-checkbox">
-              <input class="main-page__content-form__checkbox-input" type="checkbox" name="bell-mountain"
+            <li class="form__location-list__item list-item">
+              <input class="form__location-list__input" type="checkbox" name="bell-mountain"
                 id="bell-mountain" checked />
-              <label class="main-page__content-form__checkbox-label" for="bell-mountain">Гора-Колокол</label>
+              <label class="form__location-list__label" for="bell-mountain">Гора-Колокол</label>
             </li>
-            <li class="main-page__content-form-checkbox">
-              <input class="main-page__content-form__checkbox-input" type="checkbox" name="slide-park" id="slide-park"
+            <li class="form__location-list__item list-item">
+              <input class="form__location-list__input" type="checkbox" name="slide-park" id="slide-park"
                 checked />
-              <label class="main-page__content-form__checkbox-label" for="slide-park">Слайд-парк</label>
+              <label class="form__location-list__label" for="slide-park">Слайд-парк</label>
             </li>
-            <li class="main-page__content-form-checkbox">
-              <input class="main-page__content-form__checkbox-input" type="checkbox" name="red-rocks" id="red-rocks" />
-              <label class="main-page__content-form__checkbox-label" for="red-rocks">Красные скалы</label>
+            <li class="form__location-list__item list-item">
+              <input class="form__location-list__input" type="checkbox" name="red-rocks" id="red-rocks" />
+              <label class="form__location-list__label" for="red-rocks">Красные скалы</label>
             </li>
           </ul>
         </fieldset>
 
-        <fieldset class="main-page__content-form__emotions">
-          <h3 class="main-page__content-form-title">Опишите свои эмоции:</h3>
-          <textarea class="main-page__content-form-text" id="emotions" name="emotions"
+        <fieldset class="form__emotions form-block">
+          <h3 class="form__emotions--title">Опишите свои эмоции:</h3>
+          <textarea class="form__emotions--text" id="emotions" name="emotions"
           placeholder="Опишите подробно все ваши восторги"></textarea>
         </fieldset>
 
-        <div class="main-page__content-form__submit">
-          <button class="main-page__content-form__button button" type="submit">
+        <div class="form__submit">
+          <button class="form__button button" type="submit">
             Отправить отзыв
           </button>
         </div>
@@ -151,13 +153,13 @@
     </section>
   </main>
 
-  <footer class="page-footer">
-    <div class="page-footer__contacts">
-      <div class="footer-contacts">
+  <footer class="footer footer-form">
+    <div class="footer__contacts">
+      <div class="footer__contacts--tag">
         <p>#visitSedona</p>
       </div>
 
-      <ul class="page-footer__social-list social-list">
+      <ul class="footer__social-list social-list">
 
         <li class="social-list__item">
           <a class="social-list__link social-list__link--twitter" href="#" aria-label="Седона в Twitter">
@@ -175,16 +177,19 @@
         </li>
       </ul>
 
-      <p class="page-footer__copyright">
+      <p class="footer__copyright">
         Разработано &nbsp;
-        <a class="page-footer__copyright-logo" href="https://up.htmlacademy.ru/adaptive/22"
+        <a class="footer__copyright-logo" href="https://up.htmlacademy.ru/adaptive/22"
           aria-label="Ссылка на сайт разработчика">
+          <svg width="27" height="35" viewBox="0 0 27 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13.6 0H13.5L0 1.4V26.1L13.5 34.1L26.9 26.1V1.4L13.6 0ZM25 12.1L13.5 5.3V5.2H13.4L13.3 5.1V5.2L1.9 12.1V3.1L13.4 1.9L25 3.1V12.1ZM13.4 6.8L24.9 13.5L20.4 16.1L13.3 11.9V13.3L19.2 16.8L18.3 17.3L13.3 14.3V15.7L17.1 18L16.3 18.5L13.3 16.7V18.1L15.2 19.2L13.4 20.3L2 13.6L13.4 6.8ZM1.9 15.1L13.3 21.9V22.9L5.4 18.2V19.6L13.4 24.4V25.5L5.4 20.8V22.2L13.4 27L21.5 22.1V16.9L24.9 14.9V24.9L13.4 31.8L1.9 25V15.1Z" fill="black"/>
+            </svg>
 
         </a>
       </p>
     </div>
   </footer>
-
+</div>
 </body>
 
 </html>
