@@ -1,24 +1,26 @@
-.form-page__intro {
+.page__intro {
   position: relative;
   height: 158px;
   background-color: @background-img-index;
-  background-image: url("../img/form/back-mobile.jpg");
+  background-image: url("../../img/form/back-mobile.jpg");
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.form-page__intro img {
+.page__intro img {
   margin-left: auto;
   margin-right: auto;
   padding-top: 53px;
 }
 
-.form-page__intro::after {
-  // не понимаю, поему это не работает :\
-  position: relative;
+.page__intro::after {
+  // где-то слышала, что испольховать том, лефт и тд не оч правильно?
+  position: absolute;
   height: 57px;
   width: 320px;
+  left: 0%;
+  top: 101px;
   content: "";
   background-image: url("../img/form/mask-mobile.svg");
   background-position: bottom;

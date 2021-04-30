@@ -9,6 +9,8 @@
 
 <body class="page-body">
 
+  <div class="page-wrapper">
+
   <header class="page-header">
     <nav class="main-nav">
       <a>
@@ -25,103 +27,119 @@
     </nav>
   </header>
 
-<!-- валидатор не ругается с: -->
-
   <main class="main-page">
 
     <h1 class="visually-hidden">Фотографии и видео из Седоны</h1>
 
-    <div class="main-page__into">
-      <img src="https://via.placeholder.com/320x214" alt="Добро пожаловать в Седону" width="320" height="214" />
-      <h2 class="main-page__intro-title">Фото и видео</h2>
-      <p class="main-page__intro-content">
-        Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.
-      </p>
+    <div class="page__intro">
+      <img src="./img/form/text-sedona.svg" alt="Добро пожаловать в Седону" width="229" height="39" />
     </div>
 
-    <section class="main-page__photo">
+    <section class="main-page__photo page-photo">
+      <h2 class="main-page__photo--title">Фото и видео</h2>
+      <p class="main-page__photo-content">
+        Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.
+      </p>
+
       <h2 class="visually-hidden">Фотографии из Седоны</h2>
 
-      <ul class="main-page__photo__list">
-        <li class="main-page__photo__item">
-          <img class="main-page__photo__item-image" src="https://via.placeholder.com/280x280" alt="Народные просторы"
+      <ul class="photo-list">
+
+        <li class="photo-list__item">
+          <img class="photo-list__item--img" src="./img/catalog/photo-1-mobile.jpg" alt="Народные просторы"
             width="280" height="280">
-          <div class="main-page__photo__item-description">
-            <h3 class="main-page__photo__item-title">Народные просторы</h3>
-            <p class="main-page__photo__item-author">Автор фото: Борис</p>
-            <p class="main-page__photo__item-likes">
-              <button class="main-page__photo__item-likes-button"></button>
-              <span class="main-page__photo__item-likes-count">1350</span>
+          <div class="photo-list__item--description">
+            <h3 class="photo-list__item--title">Народные просторы</h3>
+            <p class="photo-list__item--author">Автор фото: Борис</p>
+            <p class="photo-list__item--likes">
+              <button class="photo-list__item--likes-button">
+                <svg width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path opacity="0.3" d="M12.9636 3.78L12.3364 6.825L11.7091 9.45H14.3227H20.8045V11.55C20.8045 11.55 20.8045 11.55 20.8045 11.655L17.7727 18.9H8.36364V8.4L12.9636 3.78ZM2.09091 10.5V18.9V10.5ZM13.8 0L6.9 6.93C6.48182 7.245 6.27273 7.77 6.27273 8.4V18.9C6.27273 20.055 7.21364 21 8.36364 21H17.7727C18.6091 21 19.3409 20.475 19.6545 19.74L22.7909 12.285C22.8955 12.075 22.8955 11.76 22.8955 11.55V9.45H23C23 8.295 22.0591 7.35 20.9091 7.35H14.3227L15.3682 2.52V2.205C15.3682 1.785 15.1591 1.365 14.95 1.05L13.8 0ZM4.18182 8.4H0V21H4.18182V8.4Z" fill="black"/>
+                  </svg>
+              </button>
+              <span class="photo-list__item--likes-count">1350</span>
             </p>
           </div>
         </li>
 
-        <li class="main-page__photo__item">
-          <img class="main-page__photo__item-image" src="https://via.placeholder.com/280x280"
+        <li class="photo-list__item">
+          <img class="photo-list__item--img" src="./img/catalog/photo-2-mobile.jpg"
             alt="Местная растительность" width="280" height="280">
-          <div class="main-page__photo__item-description">
-            <h3 class="main-page__photo__item-title">Местная растительность</h3>
-            <p class="main-page__photo__item-author">Автор фото: Сергей</p>
-            <p class="main-page__photo__item-likes">
-              <button class="main-page__photo__item-likes-button"></button>
-              <span class="main-page__photo__item-likes-count">143</span>
+          <div class="photo-list__item--description">
+            <h3 class="photo-list__item--title">Местная растительность</h3>
+            <p class="photo-list__item--author">Автор фото: Сергей</p>
+            <p class="photo-list__item--likes">
+              <button class="photo-list__item--likes-button">
+                <svg width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path opacity="0.3" d="M12.9636 3.78L12.3364 6.825L11.7091 9.45H14.3227H20.8045V11.55C20.8045 11.55 20.8045 11.55 20.8045 11.655L17.7727 18.9H8.36364V8.4L12.9636 3.78ZM2.09091 10.5V18.9V10.5ZM13.8 0L6.9 6.93C6.48182 7.245 6.27273 7.77 6.27273 8.4V18.9C6.27273 20.055 7.21364 21 8.36364 21H17.7727C18.6091 21 19.3409 20.475 19.6545 19.74L22.7909 12.285C22.8955 12.075 22.8955 11.76 22.8955 11.55V9.45H23C23 8.295 22.0591 7.35 20.9091 7.35H14.3227L15.3682 2.52V2.205C15.3682 1.785 15.1591 1.365 14.95 1.05L13.8 0ZM4.18182 8.4H0V21H4.18182V8.4Z" fill="black"/>
+                  </svg>
+              </button>
+              <span class="photo-list__item--likes-count">143</span>
             </p>
           </div>
         </li>
 
-        <li class="main-page__photo__item">
-          <img class="main-page__photo__item-image" src="https://via.placeholder.com/280x280" alt="Дорога на север"
+        <li class="photo-list__item">
+          <img class="photo-list__item--img" src="./img/catalog/photo-3-mobile.jpg" alt="Дорога на север"
             width="280" height="280">
-          <div class="main-page__photo__item-description">
-            <h3 class="main-page__photo__item-title">Дорога на север</h3>
-            <p class="main-page__photo__item-author">Автор фото: Петр</p>
-            <p class="main-page__photo__item-likes">
-              <button class="main-page__photo__item-likes-button"></button>
-              <span class="main-page__photo__item-likes-count">96</span>
+          <div class="photo-list__item--description">
+            <h3 class="photo-list__item--title">Дорога на север</h3>
+            <p class="photo-list__item--author">Автор фото: Петр</p>
+            <p class="photo-list__item--likes">
+              <button class="photo-list__item--likes-button">
+                <svg width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path opacity="0.3" d="M12.9636 3.78L12.3364 6.825L11.7091 9.45H14.3227H20.8045V11.55C20.8045 11.55 20.8045 11.55 20.8045 11.655L17.7727 18.9H8.36364V8.4L12.9636 3.78ZM2.09091 10.5V18.9V10.5ZM13.8 0L6.9 6.93C6.48182 7.245 6.27273 7.77 6.27273 8.4V18.9C6.27273 20.055 7.21364 21 8.36364 21H17.7727C18.6091 21 19.3409 20.475 19.6545 19.74L22.7909 12.285C22.8955 12.075 22.8955 11.76 22.8955 11.55V9.45H23C23 8.295 22.0591 7.35 20.9091 7.35H14.3227L15.3682 2.52V2.205C15.3682 1.785 15.1591 1.365 14.95 1.05L13.8 0ZM4.18182 8.4H0V21H4.18182V8.4Z" fill="black"/>
+                  </svg>
+              </button>
+              <span class="photo-list__item--likes-count">96</span>
             </p>
           </div>
         </li>
 
-        <li class="main-page__photo__item">
-          <img class="main-page__photo__item-image" src="https://via.placeholder.com/280x280" alt="Мост Дьявола"
+        <li class="photo-list__item">
+          <img class="photo-list__item--img" src="./img/catalog/photo-4-mobile.jpg" alt="Мост Дьявола"
             width="280" height="280">
-          <div class="main-page__photo__item-description">
-            <h3 class="main-page__photo__item-title">Мост Дьявола</h3>
-            <p class="main-page__photo__item-author">Автор фото: Антон</p>
-            <p class="main-page__photo__item-likes">
-              <button class="main-page__photo__item-likes-button"></button>
-              <span class="main-page__photo__item-likes-count">254</span>
+          <div class="photo-list__item--description">
+            <h3 class="photo-list__item--title">Мост Дьявола</h3>
+            <p class="photo-list__item--author">Автор фото: Антон</p>
+            <p class="photo-list__item--likes">
+              <button class="photo-list__item--likes-button">
+                <svg width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path opacity="0.3" d="M12.9636 3.78L12.3364 6.825L11.7091 9.45H14.3227H20.8045V11.55C20.8045 11.55 20.8045 11.55 20.8045 11.655L17.7727 18.9H8.36364V8.4L12.9636 3.78ZM2.09091 10.5V18.9V10.5ZM13.8 0L6.9 6.93C6.48182 7.245 6.27273 7.77 6.27273 8.4V18.9C6.27273 20.055 7.21364 21 8.36364 21H17.7727C18.6091 21 19.3409 20.475 19.6545 19.74L22.7909 12.285C22.8955 12.075 22.8955 11.76 22.8955 11.55V9.45H23C23 8.295 22.0591 7.35 20.9091 7.35H14.3227L15.3682 2.52V2.205C15.3682 1.785 15.1591 1.365 14.95 1.05L13.8 0ZM4.18182 8.4H0V21H4.18182V8.4Z" fill="black"/>
+                  </svg>
+              </button>
+              <span class="photo-list__item--likes-count">254</span>
             </p>
           </div>
         </li>
       </ul>
     </section>
 
-    <section class="main-page__video">
+    <section class="video">
       <h2 class="visually-hidden">Видеообзор Седоны</h2>
 
-      <div class="main-page__video-motivation">
-        <h3 class="main-page__video-motivation__title">
+      <div class="video-motivation">
+        <h3 class="video-motivation--title">
           Все еще сомневаетесь?
         </h3>
-        <p class="main-page__video-motivation__text">
+        <p class="video-motivation--text">
           Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!
         </p>
       </div>
       <!-- я не уверена, что видео правильно вставлять так, прочитала, что его еще можно
       через iframe вставлять, но не уверена как лучше -->
-      <video class="main-page__video-content" src="#" width="320" height="201"></video>
+      <video class="video--content" src="#" width="320" height="201"></video>
     </section>
 
   </main>
 
-  <footer class="page-footer">
-    <div class="page-footer__contacts">
-      <div class="footer-contacts">
+  <footer class="footer footer-form">
+    <div class="footer__contacts">
+      <div class="footer__contacts--tag">
         <p>#visitSedona</p>
       </div>
 
-      <ul class="page-footer__social-list social-list">
+      <ul class="footer__social-list social-list">
 
         <li class="social-list__item">
           <a class="social-list__link social-list__link--twitter" href="#" aria-label="Седона в Twitter">
@@ -139,15 +157,19 @@
         </li>
       </ul>
 
-      <p class="page-footer__copyright">
+      <p class="footer__copyright">
         Разработано &nbsp;
-        <a class="page-footer__copyright-logo" href="https://up.htmlacademy.ru/adaptive/22"
+        <a class="footer__copyright-logo" href="https://up.htmlacademy.ru/adaptive/22"
           aria-label="Ссылка на сайт разработчика">
+          <svg width="27" height="35" viewBox="0 0 27 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13.6 0H13.5L0 1.4V26.1L13.5 34.1L26.9 26.1V1.4L13.6 0ZM25 12.1L13.5 5.3V5.2H13.4L13.3 5.1V5.2L1.9 12.1V3.1L13.4 1.9L25 3.1V12.1ZM13.4 6.8L24.9 13.5L20.4 16.1L13.3 11.9V13.3L19.2 16.8L18.3 17.3L13.3 14.3V15.7L17.1 18L16.3 18.5L13.3 16.7V18.1L15.2 19.2L13.4 20.3L2 13.6L13.4 6.8ZM1.9 15.1L13.3 21.9V22.9L5.4 18.2V19.6L13.4 24.4V25.5L5.4 20.8V22.2L13.4 27L21.5 22.1V16.9L24.9 14.9V24.9L13.4 31.8L1.9 25V15.1Z" fill="black"/>
+            </svg>
 
         </a>
       </p>
     </div>
   </footer>
+</div>
 </body>
 
 </html>
