@@ -1,5 +1,5 @@
 
-.page__content {
+.form-page__content {
   margin-top: 36px;
 }
 
@@ -22,36 +22,27 @@
   border-top: 1px solid @input-active;
 }
 
-.list-item {
-  list-style: none;
-}
-
 .form-list {
+  list-style: none;
   text-align: start;
   padding: 0 0 15px 20px;
   margin: 0;
 }
 
 // наверное, лучше задать им какой-то общий класс?..
-.form__name--title,
-.form-contacts__title,
-.form__impression--title,
-.form__location--title,
-.form__emotions--title {
+.form__title {
   font-size: 18px;
   line-height: 26px;
 }
 
-.form__impression-list__label,
-.form__location-list__label {
+.custom-input__label {
   font-size: 18px;
   line-height: 26px;
   font-weight: bold;
   text-transform: none;
 }
 
-.form__name-list__item--sub-tittle,
-.form-contacts-list__item--sub-tittle {
+.form__sub-tittle {
   line-height: 26px;
   color: @basic-dark;
 }
@@ -78,31 +69,4 @@
 
 .form__submit {
   padding: 51px 0 0;
-}
-
-.form__button {
-  width: 280px;
-  height: 58px;
-  // padding: 20px 131px;
-  font-size: 21px;
-  line-height: 26px;
-  background-color: @accent-color;
-
-  &:hover {
-    background-color: @accent-hover;
-  }
-
-  &:focus {
-    background-color: @accent-hover;
-  }
-
-  &:active {
-    color: @basic-white-03;
-    background-color: @accent-active;
-  }
-
-  &:disabled {
-    color: @basic-white;
-    background-color: @input-active;
-  }
 }
