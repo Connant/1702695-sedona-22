@@ -30,12 +30,14 @@
 
     <h1 class="visually-hidden">Страница формы отзыва</h1>
 
-    <div class="page__intro">
+    <!-- на других тоже -->
+    <div class="intro">
       <img src="./img/form/text-sedona.svg" alt="Добро пожаловать в Седону" width="229" height="39" />
 
     </div>
+    <!--  todo плагин -->
 
-    <section class="form-page__content page__content">
+    <section class="form-page__content">
       <h2 class="form-page__intro-title">Оставьте свой отзыв</h2>
       <p class="form-page__intro-content">
         Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о
@@ -46,26 +48,27 @@
       <form class="form" action="https://echo.htmlacademy.ru" method="POST">
 
         <fieldset class="form__name form-block">
-          <h3 class="form__name--title">Представьтесь:</h3>
+          <h3 class="form__title">Представьтесь:</h3>
+          <!-- остальные не забудь -->
           <ul class="form__name-list form-list">
-            <li class="form__name-list__item list-item">
-              <label class="form__name-list__item--label form-label" for="name">
-                <span class="form__name-list__item--sub-tittle">Имя*:</span>
-                <input class="form__name-list__item--input form-input" type="text" name="name" id="name" placeholder="Петр"
+            <li class="form-list__item">
+              <label class="form__label" for="name">
+                <span class="form__sub-tittle">Имя*:</span>
+                <input class="form__input" type="text" name="name" id="name" placeholder="Петр"
                   required />
               </label>
             </li>
-            <li class="form__name-list__item list-item">
-              <label class="form__name-list__item--label form-label" for="last-name">
-                <span class="form__name-list__item--sub-tittle">Фамилия*:</span>
-                <input class="form__name-list__item--input form-input" type="text" name="last-name" id="last-name"
+            <li class="form-list__item">
+              <label class="form__label" for="last-name">
+                <span class="form__sub-tittle">Фамилия*:</span>
+                <input class="form__input" type="text" name="last-name" id="last-name"
                 placeholder="Иванов" required />
               </label>
             </li>
-            <li class="form__name-list__item list-item">
-              <label class="form__name-list__item--label form-label" for="patronymic">
-                <span class="form__name-list__item--sub-tittle">Отчество:</span>
-                <input class="form__name-list__item--input form-input" type="text" name="patronymic" id="patronymic"
+            <li class="form-list__item">
+              <label class="form__label" for="patronymic">
+                <span class="form__sub-tittle">Отчество:</span>
+                <input class="form__input" type="text" name="patronymic" id="patronymic"
                 placeholder="Александрович" />
               </label>
             </li>
@@ -73,19 +76,20 @@
         </fieldset>
 
         <fieldset class="form-contacts form-block">
-          <h3 class="form-contacts--title">Контактная информация:</h3>
-          <ul class="form-contacts-list form-list">
-            <li class="form-contacts-list__item list-item">
-              <label class="form-contacts-list__item--label form-label" for="number">
-                <span class="form-contacts-list__item--sub-tittle">Контактный номер*:</span>
-                <input class="form-contacts-list__item--input form-input" type="text" name="number" id="number"
+          <h3 class="form__title">Контактная информация:</h3>
+          <ul class="form__contacts-list form-list">
+            <!-- иконку сделать псевдо у лейбла -->
+            <li class="form-list__item">
+              <label class="form__label" for="number">
+                <span class="form__sub-tittle">Контактный номер*:</span>
+                <input class="form__input" type="text" name="number" id="number"
                 placeholder="Введите телефон" required />
               </label>
             </li>
-            <li class="form-contacts-list__item list-item">
-              <label class="form-contacts-list__item--label form-label" for="e-mail">
-                <span class="form-contacts-list__item--sub-tittle">Электронная почта*:</span>
-                <input class="form-contacts-list__item--input form-input" type="text" name="e-mail" id="e-mail"
+            <li class="form-list__item">
+              <label class="form__label" for="e-mail">
+                <span class="form__sub-tittle">Электронная почта*:</span>
+                <input class="form__input" type="text" name="e-mail" id="e-mail"
                 placeholder="Введите e-mail" required />
               </label>
             </li>
@@ -93,53 +97,60 @@
         </fieldset>
 
         <fieldset class="form__impression form-block">
-          <h3 class="form__impression--title">Ваше общее впечатление:</h3>
+          <h3 class="form__title">Ваше общее впечатление:</h3>
+
+          <!-- сделать радио-кнопки с помощью градиентов -->
+
           <ul class="form__impression-list form-list">
-            <li class="form__impression-list__item list-item">
-              <input class="form__impression-list__input" type="radio" name="radio" value="positive"
+            <li class="form-list__item custom-input">
+              <input class="custom-input__input" type="radio" name="radio" value="positive"
                 id="positive" checked />
-              <label class="form__impression-list__label" for="positive">Скорее положительное</label>
+              <label class="custom-input__label custom-input__label--radio" for="positive">Скорее положительное</label>
             </li>
-            <li class="form__impression-list__item list-item">
-              <input class="form__impression-list__input" type="radio" name="radio" value="negative"
+
+            <li class="form-list__item custom-input">
+              <input class="custom-input__input" type="radio" name="radio" value="negative"
                 id="negative" />
-              <label class="form__impression-list__label" for="negative">Скорее отрицательное</label>
+              <label class="custom-input__label custom-input__label--radio" for="negative">Скорее отрицательное</label>
             </li>
-            <li class="form__impression-list__item list-item">
-              <input class="form__impression-list__input" type="radio" name="radio" value="unsure"
+
+            <li class="form-list__item custom-input">
+              <input class="custom-input__input" type="radio" name="radio" value="unsure"
                 id="unsure" />
-              <label class="form__impression-list__label" for="unsure">Затрудняюсь ответить</label>
+              <label class="custom-input__label custom-input__label--radio" for="unsure">Затрудняюсь ответить</label>
             </li>
           </ul>
         </fieldset>
 
         <fieldset class="form__location form-block">
-          <h3 class="form__location--title">Посещенные достопримечательности:</h3>
+
+          <h3 class="form__title">Посещенные достопримечательности:</h3>
+
           <ul class="form__location-list form-list">
-            <li class="form__location-list__item list-item">
-              <input class="form__location-list__input" type="checkbox" name="devil-bridge"
+            <li class="form-list__item custom-input">
+              <input class="custom-input__input" type="checkbox" name="devil-bridge"
                 id="devil-bridge" checked />
-              <label class="form__location-list__label" for="devil-bridge">Мост Дьявола</label>
+              <label class="custom-input__label custom-input__label--checkbox" for="devil-bridge">Мост Дьявола</label>
             </li>
-            <li class="form__location-list__item list-item">
-              <input class="form__location-list__input" type="checkbox" name="bell-mountain"
+            <li class="form-list__item custom-input">
+              <input class="custom-input__input" type="checkbox" name="bell-mountain"
                 id="bell-mountain" checked />
-              <label class="form__location-list__label" for="bell-mountain">Гора-Колокол</label>
+              <label class="custom-input__label custom-input__label--checkbox" for="bell-mountain">Гора-Колокол</label>
             </li>
-            <li class="form__location-list__item list-item">
-              <input class="form__location-list__input" type="checkbox" name="slide-park" id="slide-park"
+            <li class="form-list__item custom-input">
+              <input class="custom-input__input" type="checkbox" name="slide-park" id="slide-park"
                 checked />
-              <label class="form__location-list__label" for="slide-park">Слайд-парк</label>
+              <label class="custom-input__label custom-input__label--checkbox" for="slide-park">Слайд-парк</label>
             </li>
-            <li class="form__location-list__item list-item">
-              <input class="form__location-list__input" type="checkbox" name="red-rocks" id="red-rocks" />
-              <label class="form__location-list__label" for="red-rocks">Красные скалы</label>
+            <li class="form-list__item custom-input">
+              <input class="custom-input__input" type="checkbox" name="red-rocks" id="red-rocks" />
+              <label class="custom-input__label custom-input__label--checkbox" for="red-rocks">Красные скалы</label>
             </li>
           </ul>
         </fieldset>
 
         <fieldset class="form__emotions form-block">
-          <h3 class="form__emotions--title">Опишите свои эмоции:</h3>
+          <h3 class="form__title">Опишите свои эмоции:</h3>
           <textarea class="form__emotions--text" id="emotions" name="emotions"
           placeholder="Опишите подробно все ваши восторги"></textarea>
         </fieldset>
@@ -153,42 +164,43 @@
     </section>
   </main>
 
-  <footer class="footer footer-form">
+  <footer class="footer">
+
     <div class="footer__contacts">
-      <div class="footer__contacts--tag">
-        <p>#visitSedona</p>
-      </div>
+      <p class="footer__hashtag">#visitSedona</p>
+    </div>
 
-      <ul class="footer__social-list social-list">
+    <ul class="social-list">
 
-        <li class="social-list__item">
-          <a class="social-list__link social-list__link--twitter" href="#" aria-label="Седона в Twitter">
-          </a>
-        </li>
+      <li class="social-list__item">
+        <a class="social-list__link social-list__link--twitter" href="#" aria-label="Седона в Twitter">
+        </a>
+      </li>
 
-        <li class="social-list__item">
-          <a class="social-list__link social-list__link--facebook" href="#" aria-label="Седона в FaceBook">
-          </a>
-        </li>
+      <li class="social-list__item">
+        <a class="social-list__link social-list__link--facebook" href="#" aria-label="Седона в FaceBook">
+        </a>
+      </li>
 
-        <li class="social-list__item">
-          <a class="social-list__link social-list__link--youtube" href="#" aria-label="Седона в YouTube">
-          </a>
-        </li>
-      </ul>
+      <li class="social-list__item">
+        <a class="social-list__link social-list__link--youtube" href="#" aria-label="Седона в YouTube">
+        </a>
+      </li>
+    </ul>
 
-      <p class="footer__copyright">
+    <div class="copyright">
+      <p class="copyright__content">
         Разработано &nbsp;
-        <a class="footer__copyright-logo" href="https://up.htmlacademy.ru/adaptive/22"
+        <a class="copyright__logo" href="https://up.htmlacademy.ru/adaptive/22"
           aria-label="Ссылка на сайт разработчика">
-          <svg width="27" height="35" viewBox="0 0 27 35" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M13.6 0H13.5L0 1.4V26.1L13.5 34.1L26.9 26.1V1.4L13.6 0ZM25 12.1L13.5 5.3V5.2H13.4L13.3 5.1V5.2L1.9 12.1V3.1L13.4 1.9L25 3.1V12.1ZM13.4 6.8L24.9 13.5L20.4 16.1L13.3 11.9V13.3L19.2 16.8L18.3 17.3L13.3 14.3V15.7L17.1 18L16.3 18.5L13.3 16.7V18.1L15.2 19.2L13.4 20.3L2 13.6L13.4 6.8ZM1.9 15.1L13.3 21.9V22.9L5.4 18.2V19.6L13.4 24.4V25.5L5.4 20.8V22.2L13.4 27L21.5 22.1V16.9L24.9 14.9V24.9L13.4 31.8L1.9 25V15.1Z" fill="black"/>
-            </svg>
+          <svg width="27" height="34" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+            <path fill="#000000" d="M30.2 5h-.2l-19.7 2.1v36.2l19.7 11.7 19.7-11.7v-36.2l-19.5-2.1zm17 36.8l-17.2 10.2-17.2-10.2v-14.8l17.1 10.2v1.8l-11.7-7v1.8l11.8 7.1v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8l-17.3-10.2-17.1 10.2v-13.6l17.2-1.8 17.2 1.8v13.6z"/>
+          </svg>
 
         </a>
-      </p>
+        </p>
     </div>
-  </footer>
+</footer>
 </div>
 </body>
 

@@ -51,10 +51,34 @@ a {
 }
 
 .button {
+  width: 280px;
+  height: 58px;
+  padding: 20px 30px;
   font-family: inherit;
   font-weight: bold;
   text-transform: inherit;
   border: none;
   color: @basic-white;
   cursor: pointer;
+  font-size: 21px;
+  line-height: 26px;
+  background-color: @accent-color;
+
+  &:hover {
+    background-color: @accent-hover;
+  }
+
+  &:focus {
+    background-color: @accent-hover;
+  }
+
+  &:active {
+    color: @basic-white-03;
+    background-color: @accent-active;
+  }
+
+  &:disabled {
+    color: @basic-white;
+    background-color: @input-active;
+  }
 }
