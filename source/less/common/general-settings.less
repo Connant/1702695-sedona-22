@@ -29,8 +29,8 @@ a {
 }
 
 .page-wrapper {
-  width: 320px;
-  position: relative;
+  // width: @mobile-width;
+  // position: relative;
   margin: 0 auto;
   padding: 0;
   background-color: @basic-white;
@@ -51,9 +51,8 @@ a {
 }
 
 .button {
-  width: 280px;
+  // width: 280px;
   height: 58px;
-  padding: 20px 30px;
   font-family: inherit;
   font-weight: bold;
   text-transform: inherit;
@@ -80,5 +79,9 @@ a {
   &:disabled {
     color: @basic-white;
     background-color: @input-active;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 16.5px 121px;
   }
 }
