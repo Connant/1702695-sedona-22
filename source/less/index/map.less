@@ -2,9 +2,17 @@
   width: 100%;
   height: 350px;
   line-height: 0;
-  background-image: url("../../img/index/desktop/map-desktop.jpg");
+  background-image: url("../img/index/mobile/mobile-map.jpg");
   background-size: cover;
   background-color: @very-lightgray;
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/index/tablet/tablet-map.jpg");
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image: url("../img/index/desktop/desktop-map.jpg");
+  }
 }
 
 .map iframe {

@@ -1,19 +1,24 @@
 .intro {
   position: relative;
-  top: -30px;
   width: 100%;
+  transform: scaleY(-50%);
   background-color: @background-img-index;
-  background-image: url("../../img/index/back-mobile.jpg");
+  background-image: url("../img/intro/mobile/mobile-intro.jpg");
+  background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
 
   @media (min-width: @tablet-width) {
-    background-image: url("../../img/index/desktop/back-desktop.jpg");
+    background-image: url("../img/intro/desktop/desktop-intro.jpg");
   }
 }
 
 .intro--secondary {
   height: 158px;
+
+  @media (min-width: @tablet-width) {
+    height: 318px;
+  }
 }
 
 .intro--main {
@@ -25,13 +30,19 @@
 }
 
 .intro img {
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 80px;
+  margin: auto;
+  padding-top: 50px;
 
   @media (min-width: @tablet-width) {
     width: 461px;
     height: 350px;
+  }
+}
+
+.intro--secondary img {
+  @media (min-width: @tablet-width) {
+    height: 78px;
+    padding-top: 95px;
   }
 }
 
@@ -40,20 +51,21 @@
   content: "";
   width: 100%;
   height: 57px;
-  bottom: -1px;
+  bottom: 0;
   left: 0;
-  background-image: url("../../img/index/intro-triangle.svg");
+  background-image: url("../img/intro/mobile/mobile-mask.svg");
+  background-position: bottom;
   background-repeat: no-repeat;
   background-size: 100%;
 
   @media (min-width: @tablet-width) {
-    background-image: url("../../img/index/intro-triangle-tablet.svg");
+    background-image: url("../img/intro/tablet/tablet-mask.svg");
     width: 100%;
     height: 57px;
   }
 
-  @media (min-width: @desktop-width) {
-    background-image: url("../../img/index/desktop-triangle.svg");
+  @media (min-width: 1000px) {
+    background-image: url("../img/intro/desktop/desktop-mask.svg");
     width: 100%;
     height: 57px;
   }
