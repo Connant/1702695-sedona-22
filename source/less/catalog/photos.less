@@ -10,15 +10,38 @@
 
 .photo__lead {
   // точный отступ сверзу потом по пиксель перыекту подгоню
-  padding: 10px 15px 0;
+  padding: 10px 20px 0;
   line-height: 24px;
   color: @basic-dark;
+
+  @media (min-width: @tablet-width) {
+    padding: 10px 112px 0;
+  }
+
+  // ну не получается нормально без ограничения ширины :(
+  // только если <br class="mobile-only">, но ты сам сказал, что такое лучше никому не показывать
+
+  @media (min-width: @desktop-width) {
+    padding: 10px 326px 0;
+  }
 }
 
 .photo-list {
   list-style: none;
   margin: 0 auto;
   padding: 0;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 50px 60px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 50px 0 0;
+  }
 }
 
 .photo-list__item {
@@ -27,18 +50,97 @@
   padding: 22px 20px 21px;
   border: none;
   border-top: 1px solid @input-active;
+
+  @media (min-width: @tablet-width) {
+    border: none;
+    margin: 0;
+    padding: 0;
+    background-color: @basic-grey;
+
+    &:first-child {
+      grid-column-start: 1;
+      grid-column-end: -1;
+    }
+
+    &:nth-child(4n+3) {
+      background-color: @another-gray;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &:first-child {
+      height: 400px;
+    }
+
+    &:not(:first-child) {
+      height: 267px;
+    }
+  }
 }
 
 .photo-list__item:last-of-type {
   border-bottom: 1px solid @input-active;
+
+  @media (min-width: @tablet-width) {
+    border: none;
+  }
+}
+
+// .card--img {
+//   @media (min-width: @tablet-width) {
+//     padding: 0;
+//   }
+// }
+
+.card--img-first {
+  @media (min-width: @tablet-width) {
+    min-height: 400px;
+    min-width: 100%;
+    object-fit: cover;
+  }
+}
+
+.card--img-secondary {
+  @media (min-width: @tablet-width) {
+    min-height: 267px;
+    min-width: 324px;
+    object-fit: cover;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 400px;
+  }
 }
 
 .card--description {
   text-align: start;
+  font-weight: bold;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: relative;
+    top: -80px;
+    color: @basic-white;
+    background-color: @basic-black-03;
+  }
+}
+
+.card--description p {
+  font-weight: normal;
+
+  @media (min-width: @desktop-width) {
+    color: @basic-white;
+  }
 }
 
 .card--title {
   font-size: 14px;
+  font-weight: bold;
   line-height: 24px;
 }
 
@@ -50,10 +152,19 @@
 }
 
 .card__likes-button {
-  cursor: pointer;
-  border: none;
   background-color: transparent;
-  // странно, что у кнопки лайка нет активных состояний...
+  border: none;
+  cursor: pointer;
+}
+
+.card__likes-button--like {
+  fill: @basic-black;
+  opacity: 0.3;
+
+  @media (min-width: @desktop-width) {
+    fill: @basic-white;
+    opacity: 1;
+  }
 }
 
 .card__likes-count {
