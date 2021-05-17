@@ -14,7 +14,7 @@
   <header class="page-header">
     <nav class="main-nav">
       <a>
-        <img class="main-nav__logo" src="./img/form/logo-mobile.svg" width="187" height="97"
+        <img class="main-nav__logo" src="./img/header/mobile/logo-mobile.svg" width="187" height="97"
           alt="Логотип сайта Седоны">
       </a>
       <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
@@ -31,9 +31,8 @@
 
     <h1 class="visually-hidden">Страница формы отзыва</h1>
 
-    <!-- на других тоже -->
     <div class="intro intro--secondary">
-      <img src="./img/form/text-sedona.svg" alt="Добро пожаловать в Седону" width="229" height="39" />
+      <img src="./img/intro/text-sedona.svg" alt="Добро пожаловать в Седону" width="229" height="39" />
 
     </div>
     <!--  todo плагин -->
@@ -41,7 +40,7 @@
     <section class="form-page__content">
       <h2 class="form-page__intro-title">Оставьте свой отзыв</h2>
       <p class="form-page__intro-content">
-        Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о
+        Помогите нашим отелям стать лучше! оставьте отзыв о них, а&nbsp;также о
         посещенных вами достопримечательностях
       </p>
       <h2 class="visually-hidden">Форма озыва</h2>
@@ -76,19 +75,19 @@
           </ul>
         </fieldset>
 
-        <fieldset class="form-contacts form-block">
+        <fieldset class="form__contacts form-block">
           <h3 class="form__title">Контактная информация:</h3>
           <ul class="form__contacts-list form-list">
             <!-- иконку сделать псевдо у лейбла -->
             <li class="form-list__item">
-              <label class="form__label" for="number">
+              <label class="form__label form__label--contacts form__label--contacts-phone" for="number">
                 <span class="form__sub-tittle">Контактный номер*:</span>
                 <input class="form__input" type="text" name="number" id="number"
                 placeholder="Введите телефон" required />
               </label>
             </li>
             <li class="form-list__item">
-              <label class="form__label" for="e-mail">
+              <label class="form__label form__label--contacts form__label--contacts-mail" for="e-mail">
                 <span class="form__sub-tittle">Электронная почта*:</span>
                 <input class="form__input" type="text" name="e-mail" id="e-mail"
                 placeholder="Введите e-mail" required />
@@ -104,19 +103,19 @@
 
           <ul class="form__impression-list form-list">
             <li class="form-list__item custom-input">
-              <input class="custom-input__input" type="radio" name="radio" value="positive"
+              <input class="visually-hidden custom-input__input" type="radio" name="radio" value="positive"
                 id="positive" checked />
               <label class="custom-input__label custom-input__label--radio" for="positive">Скорее положительное</label>
             </li>
 
             <li class="form-list__item custom-input">
-              <input class="custom-input__input" type="radio" name="radio" value="negative"
+              <input class="visually-hidden custom-input__input" type="radio" name="radio" value="negative"
                 id="negative" />
               <label class="custom-input__label custom-input__label--radio" for="negative">Скорее отрицательное</label>
             </li>
 
             <li class="form-list__item custom-input">
-              <input class="custom-input__input" type="radio" name="radio" value="unsure"
+              <input class="visually-hidden custom-input__input" type="radio" name="radio" value="unsure"
                 id="unsure" />
               <label class="custom-input__label custom-input__label--radio" for="unsure">Затрудняюсь ответить</label>
             </li>
@@ -125,26 +124,26 @@
 
         <fieldset class="form__location form-block">
 
-          <h3 class="form__title">Посещенные достопримечательности:</h3>
+          <h3 class="form__title">Посещенные<br>достопримечательности:</h3>
 
           <ul class="form__location-list form-list">
             <li class="form-list__item custom-input">
-              <input class="custom-input__input" type="checkbox" name="devil-bridge"
+              <input class="visually-hidden custom-input__input" type="checkbox" name="devil-bridge"
                 id="devil-bridge" checked />
               <label class="custom-input__label custom-input__label--checkbox" for="devil-bridge">Мост Дьявола</label>
             </li>
             <li class="form-list__item custom-input">
-              <input class="custom-input__input" type="checkbox" name="bell-mountain"
+              <input class="visually-hidden custom-input__input" type="checkbox" name="bell-mountain"
                 id="bell-mountain" checked />
               <label class="custom-input__label custom-input__label--checkbox" for="bell-mountain">Гора-Колокол</label>
             </li>
             <li class="form-list__item custom-input">
-              <input class="custom-input__input" type="checkbox" name="slide-park" id="slide-park"
+              <input class="visually-hidden custom-input__input" type="checkbox" name="slide-park" id="slide-park"
                 checked />
               <label class="custom-input__label custom-input__label--checkbox" for="slide-park">Слайд-парк</label>
             </li>
             <li class="form-list__item custom-input">
-              <input class="custom-input__input" type="checkbox" name="red-rocks" id="red-rocks" />
+              <input class="visually-hidden custom-input__input" type="checkbox" name="red-rocks" id="red-rocks" />
               <label class="custom-input__label custom-input__label--checkbox" for="red-rocks">Красные скалы</label>
             </li>
           </ul>
