@@ -1,1 +1,41 @@
-//
+.video {
+  padding: 33px 0 0;
+}
+
+
+@media (min-width: @tablet-width) {
+  .video {
+    padding: 58px 60px 0;
+  }
+
+  .video-motivation__title {
+    font-size: 30px;
+    line-height: 26px;
+  }
+
+  .video-motivation__text {
+    padding: 20px 95px;
+    margin: 0 auto;
+  }
+
+  .video__content {
+    min-width: 648px;
+    min-height: 500px;
+    object-fit: cover;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .video {
+    padding: 63px 60px 0;
+  }
+
+  .video-motivation__text {
+    padding: 20px 290px;
+    margin: 0 auto;
+  }
+
+  .video__content {
+    min-width: 800px;
+  }
+}
