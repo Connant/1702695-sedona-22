@@ -14,9 +14,12 @@
   <header class="page-header">
     <nav class="main-nav">
       <a>
-        <img class="main-nav__logo" src="./img/header/mobile/logo-mobile.svg" width="187" height="97"
-          alt="Логотип сайта Седоны">
-      </a>
+        <picture>
+          <source media="(min-width: 1199px)" srcset="./img/header/desktop/logo-desktop.svg">
+          <img class="main-nav__logo" src="./img/header/mobile/logo-mobile.svg" width="187" height="97"
+        alt="Логотип сайта Седоны">
+        </picture>
+    </a>
       <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
       <ul class="main-nav-list">
         <li class="main-nav__item"><a href="index.html">Главная</a></li>
@@ -81,14 +84,14 @@
             <!-- иконку сделать псевдо у лейбла -->
             <li class="form-list__item">
               <label class="form__label form__label--contacts form__label--contacts-phone" for="number">
-                <span class="form__sub-tittle">Контактный номер*:</span>
+                <span class="form__sub-tittle"><span class="desktop-hidden">Контактный </span>телефон*:</span>
                 <input class="form__input" type="text" name="number" id="number"
                 placeholder="Введите телефон" required />
               </label>
             </li>
             <li class="form-list__item">
               <label class="form__label form__label--contacts form__label--contacts-mail" for="e-mail">
-                <span class="form__sub-tittle">Электронная почта*:</span>
+                <span class="form__sub-tittle">Электронная&nbsp;почта*:</span>
                 <input class="form__input" type="text" name="e-mail" id="e-mail"
                 placeholder="Введите e-mail" required />
               </label>

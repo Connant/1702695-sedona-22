@@ -7,7 +7,7 @@
     content: "";
     width: 320px;
     height: 37px;
-    background-image: url("../../img/index/white-tr.svg");
+    background-image: url("./img/index/white-tr.svg");
     position: absolute;
     left: 0;
   }
@@ -25,21 +25,16 @@
   margin: 0;
   padding: 0;
   list-style: none;
+  counter-reset: section;
+  background-color: @main-background;
 
   @media (min-width: @tablet-width) {
     display: flex;
+    // если тут задать паддинг, то сверху вылезает фоновый цвет
+    margin: 40px 0 0;
     flex-wrap: wrap;
     flex-direction: row;
-    // position: relative;
-    // display: grid;
-    // margin: 0;
-    // padding: 0;
-    // grid-template-columns: 1fr 1fr 1fr;
     list-style: none;
-
-    // &:nth-last-child(-n+3) {
-    //   flex-direction: row;
-    // }
   }
 }
 
@@ -48,19 +43,22 @@
   background-color: @accent-color;
 
   @media (min-width: @tablet-width) {
-    min-width: 100%;
+    width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    // display: grid;
-    // grid-template-columns: 1fr 1fr 1fr;
-    // grid-column: 1/-1;
+    // space-around нужен для того, чтобы на, напрмер, 980px все выглядело более менее
+    justify-content: space-around;
+
+    &:nth-of-type(even) {
+      flex-direction: row-reverse;
+    }
   }
 }
 
 .features-sublist {
   margin: 0;
-  padding: 10px 0 0;
+  padding: 35px 11px;
   text-align: start;
   list-style: none;
   color: @basic-black;
@@ -68,11 +66,10 @@
 
   @media (min-width: @tablet-width) {
     min-width: 100%;
+    min-height: 260px;
     display: flex;
-    // display: grid;
-    // grid-template-columns: 1fr 1fr 1fr;
-    // grid-column: 1/-1;
     text-align: center;
+    padding: 35px 0;
 
     &:nth-child(even) {
       flex-direction: row-reverse;
@@ -80,12 +77,107 @@
   }
 }
 
+.features-sublist__item {
+  position: relative;
+
+  &--house::before {
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    content: "";
+    width: 39px;
+    height: 37px;
+    background-image: url("../../img/index/icon-house.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+
+  &--food::before {
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    content: "";
+    width: 39px;
+    height: 37px;
+    background-image: url("../../img/index/icon-burger.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+
+  &--souvenirs::before {
+    // не понимаю, почему картинка немного обрезается снизу
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    content: "";
+    width: 39px;
+    height: 37px;
+    background-image: url("../../img/index/icon-gift.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+
+  @media (min-width: @tablet-width) {
+    &--house::before {
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 72px;
+      height: 75px;
+    }
+
+    &--food::before {
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 76px;
+      height: 68px;
+    }
+
+    &--souvenirs::before {
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 64px;
+      height: 75px;
+    }
+  }
+}
+
+.features-sublist__item-title {
+  padding-left: 60px;
+  font-size: 18px;
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    padding: 120px 20px 0;
+    font-size: 21px;
+    line-height: 26px;
+  }
+}
+
+.features-sublist .features-sublist__item p {
+  padding: 10px 0 10px 60px;
+
+  @media (min-width: @tablet-width) {
+    padding: 20px 20px;
+    font-size: 14px;
+    line-height: 21px;
+
+    &:nth-of-type(2) {
+      // что-то ему не нравится, не хочет рабоать ???
+      padding: 20px 35px;
+    }
+  }
+}
+
 .features-list__item {
   margin: 0;
-  padding: 28px 0 0;
+  padding: 0;
 
   &:nth-last-child(-n+3) {
-    background-color: @main-background;
+    padding: 25px 15px;
+    margin: 0 20px;
 
     &:not(:nth-last-child(1)) {
       border-bottom: 1px solid @gray-dark-border;
@@ -93,24 +185,28 @@
   }
 
   @media (min-width: @tablet-width) {
-    // min-width: 150px;
     display: flex;
-    // display: grid;
-    // grid-template-columns: 1fr 1fr 1fr;
-    // grid-column: 1/-1;
     text-align: center;
 
     &:nth-last-child(-n+3) {
+      margin: 0;
+      padding: 0;
+
       &:not(:nth-last-child(1)) {
         border-bottom: none;
+        margin: 0;
       }
     }
   }
 }
 
 .features-list__item--min {
+  padding: 25px 10px;
+
   @media (min-width: @tablet-width) {
     width: 33.3333%;
+    min-height: 256px;
+    padding: 0;
   }
 }
 
@@ -118,15 +214,53 @@
   display: block;
 
   @media (min-width: @tablet-width) {
-    flex-grow: 2;
-    // grid-column: span 2;
+    width: 100%;
   }
 }
 
 .features-list__info {
+  position: relative;
+  padding: 40px 0;
+
   @media (min-width: @tablet-width) {
-    flex-grow: 1;
-    // grid-column: span 2;
+    width: 33.3333%;
+    padding: 40px 0;
+
+    &:first-of-type::after {
+      display: none;
+    }
+  }
+}
+
+.features-list__wrapper {
+  @media (min-width: @tablet-width) {
+    padding: 40px 30px;
+  }
+}
+
+.features-list__info--traingle {
+  position: relative;
+  padding: 55px 0 40px;
+
+  &:first-of-type::after {
+    position: absolute;
+    content: "";
+    height: 37px;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-image: url("../../img/index/mobile/mobile-white-mask.svg");
+    background-size: auto 100%;
+    background-position: top;
+    background-repeat: no-repeat;
+  }
+
+  @media (min-width: @tablet-width) {
+    // padding: 40px 0;
+
+    &:first-of-type::after {
+      display: none;
+    }
   }
 }
 
@@ -134,124 +268,29 @@
   margin: 0;
   font-size: 18px;
   font-weight: bold;
+
+  &::after {
+    display: flex;
+    margin-top: 26px;
+    counter-increment: section;
+    content: " — №"counter(section) " —";
+    font-size: 14px;
+    font-weight: normal;
+    justify-content: center;
+  }
 }
 
 .features-list__item p {
   font-size: inherit;
   line-height: 21px;
   margin: 0;
+  padding: 30px 0 0;
+
+  @media (min-width: @tablet-width) {
+    padding: 30px 0 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 30px 20px 0;
+  }
 }
-
-
-// .features {
-//   padding: 32px 0 0;
-// }
-
-// .features__title {
-//   margin: 0 auto;
-//   padding: 0 25px;
-//   font-weight: bold;
-//   font-size: 18px;
-//   line-height: 26px;
-// }
-
-// .features__lead {
-//   margin: 0 auto;
-//   padding: 30px 15px 11px;
-//   line-height: 26px;
-// }
-
-// .features-list {
-//   position: relative;
-//   margin: 0;
-//   padding: 0;
-//   list-style: none;
-//   background-color: @main-background;
-// }
-
-// .features-sublist {
-//   margin: 0;
-//   padding: 10px 0 0;
-//   text-align: start;
-//   list-style: none;
-//   background-color: @basic-white;
-// }
-
-// .features-sublist__item {
-//   padding: 25px 11px 12px 69px;
-// }
-
-// .features-sublist__item-title--house::after {
-//   position: absolute;
-//   content: "";
-//   width: 100%;
-//   height: 40px;
-//   left: 0;
-//   background-image: url("../../img/index/icon-house.svg");
-//   background-position: 21px 0;
-//   background-repeat: no-repeat;
-//   background-size: 12%;
-// }
-
-// .features-sublist__item-title--food::after {
-//   position: absolute;
-//   content: "";
-//   width: 100%;
-//   height: 40px;
-//   left: 0;
-//   background-image: url("../../img/index/icon-burger.svg");
-//   background-position: 21px 0;
-//   background-repeat: no-repeat;
-//   background-size: 12%;
-// }
-
-// .features-sublist__item-title--souvenirs::after {
-//   position: absolute;
-//   content: "";
-//   width: 100%;
-//   height: 47px;
-//   left: 0;
-//   background-image: url("../../img/index/icon-gift.svg");
-//   background-position: 21px 0;
-//   background-repeat: no-repeat;
-//   background-size: 12%;
-// }
-
-// .features-list__item {
-//   padding: 65px 0 39px;
-// }
-
-// .features-list__info:first-child::after {
-//   position: absolute;
-//   content: "";
-//   width: 100%;
-//   height: 37px;
-//   top: -3px;
-//   left: 0;
-//   background-image: url("../../img/index/white-tr.svg");
-// }
-
-// .features-list__item--big {
-//   color: @basic-white;
-//   background-color: @accent-color;
-// }
-
-// // .features-sublist-item {
-// // }
-
-// .features-list__item-title {
-//   margin: 0;
-//   font-size: 21px;
-//   line-height: 21px;
-// }
-
-// .features-sublist__item-title {
-//   margin: 0;
-//   font-size: 21px;
-//   line-height: 21px;
-//   color: @basic-black;
-// }
-
-// .features-sublist__item p {
-//   color: @basic-black;
-// }

@@ -1,0 +1,142 @@
+.controls {
+  position: absolute;
+  display: flex;
+  // как еще его запихать посередине то..
+  left: 50%;
+  transform: translateX(-50%);
+  flex-wrap: wrap;
+  padding: 0 20px;
+  bottom: -69px;
+
+  @media (min-width: @tablet-width) {
+    min-width: 648px;
+    bottom: 5px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 800px;
+  }
+}
+
+.controls__playbar {
+  position: relative;
+  display: flex;
+  width: 280px;
+  height: 45px;
+  flex-grow: 1;
+  flex-basis: 100%;
+  align-items: center;
+  justify-content: center;
+  background-color: @basic-black-06;
+
+  @media (min-width: @tablet-width) {
+    height: 93px;
+    padding-right: 80px;
+  }
+}
+
+.controls__scale {
+  width: 235px;
+  height: 3px;
+  background-color: @basic-white-03;
+  border-radius: 10%;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    width: 389px;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 540px;
+  }
+}
+
+.controls__slider {
+  width: 9px;
+  height: 9px;
+  background-color: @basic-white;
+  border-radius: 50%;
+  position: absolute;
+  left: 20%;
+
+  @media (min-width: @tablet-width) {
+    left: 26%;
+  }
+}
+
+.controls__buttons {
+  display: flex;
+  width: 100%;
+  padding: 23px 25px;
+  justify-content: space-between;
+  background-color: @basic-grey;
+
+  @media (min-width: @tablet-width) {
+    width: 648px;
+    position: absolute;
+    padding: 35px 0;
+    background-color: transparent;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 800px;
+  }
+}
+
+.controls__img {
+  fill: @video-control;
+
+  &:focus,
+  &:hover {
+    fill: @basic-dark;
+  }
+
+  &:active {
+    fill: @basic-dark-03;
+  }
+
+  @media (min-width: @tablet-width) {
+    fill: @basic-white;
+
+    &:focus,
+    &:hover {
+      fill: @basic-white-06;
+    }
+
+    &:active {
+      fill: @basic-white-03;
+    }
+  }
+}
+
+.controls__replay,
+.controls__subtitles,
+.controls__fullscreen {
+  height: 20px;
+  border: none;
+  background-color: transparent;
+}
+
+.controls__replay {
+  @media (min-width: @tablet-width) {
+    padding-left: 35px;
+  }
+}
+
+.controls__subtitles {
+  padding-left: 35%;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 69%;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 75%;
+  }
+}
+
+.controls__fullscreen {
+  @media (min-width: @tablet-width) {
+    padding-right: 41px;
+  }
+}

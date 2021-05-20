@@ -110,8 +110,27 @@
     display: inline-flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 33%;
+    justify-content: start;
+    width: 50%;
     // размер примерный, временный
+  }
+}
+
+.form__contacts-list .form__sub-tittle {
+  @media (min-width: @desktop-width) {
+    padding: 20px 12px 0 0;
+  }
+}
+
+.form__contacts-list .form__input {
+  @media (min-width: @desktop-width) {
+    width: 257px;
+  }
+}
+
+.desktop-hidden {
+  @media (min-width: @desktop-width) {
+    display: none;
   }
 }
 
