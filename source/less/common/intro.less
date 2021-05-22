@@ -8,8 +8,22 @@
   background-repeat: no-repeat;
   background-size: cover;
 
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .intro {
+      background-image: url("../img/intro/mobile/mobile-intro@2.jpg");
+      background-size: 320px auto;
+    }
+  }
+
   @media (min-width: @tablet-width) {
     background-image: url("../img/intro/desktop/desktop-intro.jpg");
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      .intro {
+        background-image: url("../img/intro/desktop/desktop-intro@2.jpg");
+        background-size: 320px auto;
+      }
+    }
   }
 }
 
@@ -40,6 +54,8 @@
 }
 
 .intro--secondary img {
+  height: 42px;
+
   @media (min-width: @tablet-width) {
     height: 78px;
     padding-top: 95px;

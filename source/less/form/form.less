@@ -1,6 +1,8 @@
 // todo ПРОВЕРЬ ВСЕ НА ВСЕХ РАЗМЕРАХ ПЕРЕД ОТПРАВКОЙ
 
 .form-page__content {
+  margin-top: 36px;
+
   @media (min-width: @desktop-width) {
     margin-top: 114px;
   }
@@ -18,15 +20,12 @@
 }
 
 .form-page__intro-content {
-  padding: 10px 8px 0;
+  margin: 0;
+  padding: 13px 8px 17px 10px;
   line-height: 24px;
   color: @basic-dark;
 
   @media (min-width: @desktop-width) {
-    // понмю, что лучше не ограничивать так сильно ширину, но в другом случае придется ставить
-    // <br>, но тогда все поедет на мобилке, потмоу что там дургой перенос
-    // todo надо будет переписать этот комментарий, нихера же самой даже непонятно
-
     width: 480px;
     margin: 0 auto;
     padding: 10px 30px;
@@ -49,10 +48,14 @@
 
 .form-block {
   width: 100%;
-  padding: 0 10px 25px;
+  padding: 0 10px 20px;
   margin: 0;
   border: none;
   border-top: 1px solid @input-active;
+
+  &:nth-child(4) {
+    padding-bottom: 18px;
+  }
 
   @media (min-width: @tablet-width) {
     padding: 0 0 25px;
@@ -66,6 +69,14 @@
   @media (min-width: @tablet-width) {
     width: 100%;
   }
+}
+
+.form__contacts {
+  padding-bottom: 23px;
+}
+
+.form__location .form__title {
+  padding-top: 15px;
 }
 
 .form__location-list {
@@ -84,6 +95,12 @@
 }
 
 .form__location-list .form-list__item {
+  padding-top: 19px;
+
+  &:nth-child(1) {
+    padding-top: 13px;
+  }
+
   @media (min-width: @tablet-width) {
     width: 211px;
     padding: 20px 22px;
@@ -103,20 +120,22 @@
   }
 }
 
-// не понимаю, почему заголовок не встает рядом, а висит над инпутом
-
 .form__contacts-list .form-list__item {
+  padding: 0 0 5px;
+
   @media (min-width: @desktop-width) {
     display: inline-flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: start;
     width: 50%;
-    // размер примерный, временный
+    padding: 0;
   }
 }
 
 .form__contacts-list .form__sub-tittle {
+  padding: 8px 0 7px 21.5px;
+
   @media (min-width: @desktop-width) {
     padding: 20px 12px 0 0;
   }
@@ -124,13 +143,7 @@
 
 .form__contacts-list .form__input {
   @media (min-width: @desktop-width) {
-    width: 257px;
-  }
-}
-
-.desktop-hidden {
-  @media (min-width: @desktop-width) {
-    display: none;
+    width: 315px;
   }
 }
 
@@ -145,7 +158,9 @@
   }
 }
 
-.form__impression-list {
+.form-block .form__impression-list {
+  padding-bottom: 0;
+
   @media (min-width: @tablet-width) {
     border-right: 1px solid @input-active;
   }
@@ -158,8 +173,11 @@
 }
 
 .form__name {
+  padding-bottom: 15px;
+
   @media (min-width: @tablet-width) {
     width: 334px;
+    padding-bottom: 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -168,8 +186,6 @@
 }
 
 .form-list {
-  // display: flex;
-  // flex-direction: column;
   list-style: none;
   text-align: start;
   padding: 0 10px;
@@ -181,10 +197,13 @@
 }
 
 .form-list__item {
+  position: relative;
   padding: 10px 0;
 }
 
 .form__title {
+  padding: 20px 10px 9px;
+  margin: 0;
   font-size: 18px;
   line-height: 26px;
 }
@@ -194,14 +213,12 @@
   line-height: 26px;
   font-weight: bold;
   text-transform: none;
-
-  // @media (min-width: @tablet-width) {
-  //   padding-left: 75px;
-  // }
 }
 
 .form__sub-tittle {
-  padding-right: 12px;
+  padding-top: 18px;
+  padding-bottom: 0;
+  padding-right: 15px;
   line-height: 26px;
   color: @basic-dark;
 
@@ -210,10 +227,15 @@
   }
 }
 
+.form__emotions .form__title {
+  padding-bottom: 15px;
+}
+
 .form__emotions-text {
-  width: 235px;
-  height: 118px;
-  padding: 13px 23px 29px 21px;
+  min-width: 280px;
+  max-width: 960px;
+  min-height: 160px;
+  padding: 12px 23px 29px 21px;
   font-family: inherit;
   font-size: 18px;
   line-height: 26px;
@@ -229,7 +251,6 @@
 
   &:focus,
   &:active {
-    // убирать аутлайн вроде плохая практика, но тут же явно все видно без него?......
     outline: none;
     background-color: transparent;
     border: 4px solid @input-active;
@@ -250,11 +271,15 @@
 .form__label {
   display: flex;
   width: 100%;
+  // align-items: center;
 }
 
 .form__input {
   width: 100%;
+  height: 58px;
   box-sizing: border-box;
+  font-size: 18px;
+  line-height: 26;
   font-family: inherit;
   font-weight: bold;
   padding: 18px 22px 14px;
@@ -277,6 +302,10 @@
     font-size: 18px;
     line-height: 26px;
   }
+
+  @media (min-width: @desktop-width) {
+    width: 315px;
+  }
 }
 
 .form__input::placeholder,
@@ -286,20 +315,30 @@
 }
 
 .form__submit {
-  padding: 51px 0 0;
+  padding: 25px 0 0;
   text-align: center;
   margin: 0 auto;
 
   @media (min-width: @tablet-width) {
+    display: inline-flex;
     width: 100%;
     padding: 33px 0 51px;
     text-align: start;
+    justify-content: space-between;
+  }
+}
+
+.form__required-field {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
   }
 }
 
 .form__button {
   min-width: 280px;
-  padding: 16.5px 15px;
+  padding: 18.5px 15px 14px;
 
   @media (min-width: @tablet-width) {
     width: 324px;
@@ -308,6 +347,19 @@
 
   @media (min-width: @desktop-width) {
     width: 480px;
+  }
+}
+
+.custom-input {
+  padding: 7px 0 0;
+  margin: 0;
+
+  &:nth-child(1) {
+    padding: 13px 0 0;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
   }
 }
 
@@ -320,43 +372,44 @@
 .form__impression-list .custom-input__input + label::before {
   content: "";
   display: inline-block;
-  width: 18px;
-  height: 18px;
+  width: 20px;
+  height: 20px;
   flex-shrink: 0;
   flex-grow: 0;
-  border: 15px solid @basic-grey;
+  border: 18px solid @basic-grey;
   border-radius: 50%;
   margin-right: 23px;
   background-color: @basic-grey;
   background-repeat: no-repeat;
   background-position: center center;
+}
 
-  &:hover,
-  &:focus {
-    border: 15px solid @input-active;
-    background-color: @input-active;
-  }
+.form__impression-list .custom-input__input + label:hover::before,
+.form__impression-list .custom-input__input + label:focus::before {
+  border: 15px solid @input-active;
+  background-color: @input-active;
+}
 
-  &:active {
-    border: 15px solid @radiocheck-down;
-    background-color: @radiocheck-down;
-  }
+.form__impression-list .custom-input__input + label:active::before {
+  border: 15px solid @radiocheck-down;
+  background-color: @radiocheck-down;
 }
 
 .form__impression-list .custom-input__input:checked + label::before {
   background-color: @basic-dark;
   background-repeat: no-repeat;
   background-position: center center;
+}
 
-  &:hover,
-  &:focus {
-    background-color: @input-active;
-  }
+.form__impression-list .custom-input__input:checked + label:hover::before,
+.form__impression-list .custom-input__input:checked + label:focus::before {
+  border: 15px solid @input-active;
+  background-color: @basic-dark;
+}
 
-  &:active {
-    border: 15px solid @basic-dark-03;
-    background-color: @radiocheck-down;
-  }
+.form__impression-list .custom-input__input:checked + label:active::before {
+  border: 15px solid @basic-dark-03;
+  background-color: @radiocheck-down;
 }
 
 .form__location-list .custom-input__input + label {
@@ -368,30 +421,34 @@
 .form__location-list .custom-input__input + label::before {
   content: "";
   display: inline-block;
-  width: 51px;
-  height: 51px;
+  width: 55px;
+  height: 55px;
   flex-shrink: 0;
   flex-grow: 0;
-  border-radius: 10%;
+  border-radius: 5%;
   margin-right: 24px;
   background-color: @basic-grey;
   background-repeat: no-repeat;
   background-position: center center;
+}
 
-  &:hover,
-  &:focus {
-    background-color: @input-active;
-  }
+.form__location-list .custom-input__input + label:hover::before,
+.form__location-list .custom-input__input + label:focus::before {
+  background-color: @radiocheck-down;
+}
 
-  &:active {
-    background-color: @radiocheck-down;
-  }
+.form__location-list .custom-input__input + label:active::before {
+  background-color: @input-active;
 }
 
 .form__location-list .custom-input__input:checked + label::before {
   background-image: url("../img/common/tick.svg");
   background-repeat: no-repeat;
   background-position: center center;
+}
+
+.form__location-list .custom-input__input:checked + label:active::before {
+  opacity: 0.3;
 }
 
 
@@ -403,39 +460,41 @@
   }
 }
 
-.form__label--contacts::before {
-  // margin: 0;
-  // padding: 0;
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: space-between;
-  // align-items: center;
-  // margin-bottom: 12px;
-  // position: relative;
+.form__label--contacts-phone::before {
+  position: absolute;
+  top: 42px;
+  right: 0;
+  content: "";
+  width: 58px;
+  height: 58px;
+  background-image: url("../../img/common/phone.svg");
+  background-color: @gray-again;
+  background-position: center;
+  background-repeat: no-repeat;
 
-  &-phone::before {
-    content: "";
-    width: 58px;
-    height: 58px;
-    position: absolute;
-    top: 35px;
-    right: 0;
-    background-color: @gray-again;
-    background-image: url("../../img/common/phone.svg");
-    background-repeat: no-repeat;
-    background-position: center center;
-  }
-
-  &-email::after {
-    content: "";
-    width: 58px;
-    height: 58px;
-    position: absolute;
-    top: 35px;
-    right: 0;
-    background-color: @gray-again;
-    background-image: url("../../img/common/mail.svg");
-    background-repeat: no-repeat;
-    background-position: center center;
+  @media (min-width: @desktop-width) {
+    top: 10px;
+    right: 94px;
   }
 }
+
+.form__label--contacts-mail::before {
+  position: absolute;
+  top: 42px;
+  right: 0;
+  content: "";
+  width: 58px;
+  height: 58px;
+  background-image: url("../../img/common/mail.svg");
+  background-color: @gray-again;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @media (min-width: @desktop-width) {
+    top: 10px;
+    right: 17px;
+  }
+}
+
+
+// todo текстария бордер и скрытый лейбл
