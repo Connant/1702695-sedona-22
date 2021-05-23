@@ -1,25 +1,21 @@
 .photo {
-  padding-top: 32px;
+  padding: 10px;
 }
 
 .photo__title {
-  padding: 0 8px;
+  padding: 0 8px 0 10px;
   font-size: 18px;
   line-height: 26px;
 }
 
 .photo__lead {
-  // точный отступ сверзу потом по пиксель перыекту подгоню
-  padding: 10px 20px 0;
+  padding: 13px 10px 0 12px;
   line-height: 24px;
   color: @basic-dark;
 
   @media (min-width: @tablet-width) {
     padding: 10px 112px 0;
   }
-
-  // ну не получается нормально без ограничения ширины :(
-  // только если <br class="mobile-only">, но ты сам сказал, что такое лучше никому не показывать
 
   @media (min-width: @desktop-width) {
     padding: 10px 326px 0;
@@ -29,7 +25,7 @@
 .photo-list {
   list-style: none;
   margin: 0 auto;
-  padding: 0;
+  padding: 24px 0 0;
 
   @media (min-width: @tablet-width) {
     display: grid;
@@ -48,7 +44,7 @@
   position: relative;
   list-style: none;
   margin: 0 auto;
-  padding: 22px 20px 21px;
+  padding: 22px 0 16px;
   border: none;
   border-top: 1px solid @input-active;
 
@@ -87,11 +83,10 @@
   }
 }
 
-// .card--img {
-//   @media (min-width: @tablet-width) {
-//     padding: 0;
-//   }
-// }
+.card--img {
+  display: block;
+  margin: 0 auto;
+}
 
 .card--img-first {
   @media (min-width: @tablet-width) {
@@ -116,6 +111,7 @@
 .card--description {
   text-align: start;
   font-weight: bold;
+  padding: 0 0 0 10px;
 
   @media (min-width: @tablet-width) {
     display: flex;
@@ -145,6 +141,8 @@
   font-size: 14px;
   font-weight: bold;
   line-height: 24px;
+  margin: 0 auto;
+  padding: 11px 1px 0 0;
 }
 
 .card--author {
@@ -152,12 +150,22 @@
   font-size: 14px;
   line-height: 24px;
   color: @basic-dark;
+  margin: 0 auto;
+  padding: 1px 1px 0 0;
+}
+
+.card--likes {
+  margin: 0 auto;
+  padding: 8px 0 0 0;
 }
 
 .card__likes-button {
+  position: relative;
   background-color: transparent;
   border: none;
   cursor: pointer;
+  top: 1px;
+  padding: 0 5px 0 0;
 }
 
 .card__likes-button--like {
@@ -172,23 +180,6 @@
 
 .card__likes-count {
   font-weight: bold;
-  font-size: 14px;
-  line-height: 24px;
-}
-
-.video {
-  padding: 32px 8px 0;
-}
-
-.video-motivation__title {
-  font-size: 18px;
-  line-height: 26px;
-}
-
-.video-motivation__text {
-  // точные отсупы подгоню позже по пиксель перфекту
-  padding: 10px 14px;
-  color: @basic-dark;
   font-size: 14px;
   line-height: 24px;
 }
