@@ -8,11 +8,11 @@
     align-items: center;
     justify-content: space-between;
     background-color: @basic-white;
-    padding: 0 60px;
+    padding: 19px 60px 15px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 0 120px;
+    padding: 0 120px 15px;
   }
 }
 
@@ -22,6 +22,10 @@
   font-weight: bold;
   font-size: 21px;
   line-height: 26px;
+
+  @media (min-width: @tablet-width) {
+    padding: 39px 0 31px 0;
+  }
 }
 
 .social-list {
@@ -31,6 +35,10 @@
   justify-content: space-between;
   align-items: center;
   list-style: none;
+
+  @media (min-width: @tablet-width) {
+    padding: 6px 13px 0 0;
+  }
 }
 
 .social-list__link {
@@ -84,19 +92,20 @@
 }
 
 .copyright {
-  padding-top: 10px;
   display: flex;
-  align-self: center;
+  flex-wrap: nowrap;
+  align-items: center;
   justify-content: center;
+  padding-top: 10px;
 
   @media (min-width: @tablet-width) {
-    padding: 0 0 7px;
+    padding: 0 1px 12px;
   }
 }
 
 .copyright__logo {
-  width: 27px;
-  height: 34px;
+  padding-top: 26px;
+  // padding-left: 3px;
   color: @basic-black;
   text-decoration: none;
 
@@ -111,8 +120,8 @@
 }
 
 .copyright__content {
-  padding-top: 4px;
-  padding-right: 2px;
+  padding-top: 20px;
+  margin-right: 10px;
   line-height: 26px;
 
   // @media (min-width: @tablet-width) {
