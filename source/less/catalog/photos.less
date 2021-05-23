@@ -1,11 +1,25 @@
 .photo {
   padding: 10px;
+
+  @media (min-width: @desktop-width) {
+    padding: 25px 0 0;
+  }
 }
 
 .photo__title {
   padding: 0 8px 0 10px;
   font-size: 18px;
   line-height: 26px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 24px;
+    padding-left: 9px;
+    font-size: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 50px;
+  }
 }
 
 .photo__lead {
@@ -14,11 +28,11 @@
   color: @basic-dark;
 
   @media (min-width: @tablet-width) {
-    padding: 10px 112px 0;
+    padding: 8px 112px 0;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 10px 326px 0;
+    padding: 10px 336px 15px;
   }
 }
 
@@ -30,13 +44,13 @@
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 50px 60px 0;
+    padding: 68px 50px 0;
   }
 
   @media (min-width: @desktop-width) {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    padding: 50px 0 50px;
+    padding: 50px 0 0;
   }
 }
 
@@ -94,17 +108,29 @@
     min-width: 100%;
     object-fit: cover;
   }
+
+  // @media (min-width: @deskop-width) {
+  //   min-height: 400px;
+  //   min-width: 100%;
+  //   object-fit: cover;
+  // }
 }
 
 .card--img-secondary {
   @media (min-width: @tablet-width) {
-    // min-height: 267px;
+    height: 267px;
     min-width: 324px;
     object-fit: cover;
   }
 
   @media (min-width: @desktop-width) {
     min-width: 400px;
+  }
+}
+
+.card--description-secondary .card--likes {
+  @media (min-width: @tablet-width) {
+    padding-right: 9px;
   }
 }
 
@@ -116,7 +142,7 @@
   @media (min-width: @tablet-width) {
     display: flex;
     justify-content: space-between;
-    padding: 0 20px;
+    padding: 10px 20px;
   }
 
   @media (min-width: @desktop-width) {
@@ -143,6 +169,10 @@
   line-height: 24px;
   margin: 0 auto;
   padding: 11px 1px 0 0;
+
+  @media (min-width: @tablet-width) {
+    padding: 6px 0 0;
+  }
 }
 
 .card--author {
@@ -152,11 +182,20 @@
   color: @basic-dark;
   margin: 0 auto;
   padding: 1px 1px 0 0;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 0 6px;
+  }
 }
 
 .card--likes {
   margin: 0 auto;
   padding: 8px 0 0 0;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    padding-top: 15px;
+  }
 }
 
 .card__likes-button {
@@ -166,6 +205,11 @@
   cursor: pointer;
   top: 1px;
   padding: 0 5px 0 0;
+
+  @media (min-width: @tablet-width) {
+    padding-right: 3px;
+    top: 1.5px;
+  }
 }
 
 .card__likes-button--like {
