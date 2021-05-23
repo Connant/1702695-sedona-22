@@ -1,23 +1,27 @@
 .features__title {
-  margin: 0;
-  padding: 32px 25px 32px;
   position: relative;
-
-  &::after {
-    content: "";
-    width: 320px;
-    height: 37px;
-    background-image: url("./img/index/white-tr.svg");
-    position: absolute;
-    left: 0;
-  }
+  margin: 0;
+  padding: 31px 25px 18px;
+  font-size: 18px;
+  line-height: 26px;
 
   @media (min-width: @tablet-width) {
-    padding: 42px 0 0;
+    padding: 44px 0 0;
+    font-size: 21px;
+  }
 
-    &::after {
-      content: none;
-    }
+  @media (min-width: @desktop-width) {
+    padding: 55px 0 0;
+  }
+}
+
+.features__lead {
+  padding: 12px 15px 13px;
+  margin: 0;
+  line-height: 26px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 31px;
   }
 }
 
@@ -30,11 +34,14 @@
 
   @media (min-width: @tablet-width) {
     display: flex;
-    // если тут задать паддинг, то сверху вылезает фоновый цвет
     margin: 40px 0 0;
     flex-wrap: wrap;
     flex-direction: row;
     list-style: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 30px 0 0;
   }
 }
 
@@ -47,7 +54,6 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    // space-around нужен для того, чтобы на, напрмер, 980px все выглядело более менее
     justify-content: space-around;
 
     &:nth-of-type(even) {
@@ -56,9 +62,15 @@
   }
 }
 
+.features-list__item--big .features-list__item-title {
+  padding-top: 18px;
+}
+
 .features-sublist {
+  display: flex;
+  flex-direction: column;
   margin: 0;
-  padding: 35px 11px;
+  padding: 35px 11px 9px;
   text-align: start;
   list-style: none;
   color: @basic-black;
@@ -68,12 +80,12 @@
     min-width: 100%;
     min-height: 260px;
     display: flex;
+    flex-direction: row;
     text-align: center;
-    padding: 35px 0;
-
-    &:nth-child(even) {
-      flex-direction: row-reverse;
-    }
+    padding-top: 37px;
+    padding-right: 0;
+    padding-left: 0;
+    padding-bottom: 33px;
   }
 }
 
@@ -94,8 +106,8 @@
 
   &--food::before {
     position: absolute;
-    top: -10px;
-    left: 10px;
+    top: -6px;
+    left: 7px;
     content: "";
     width: 39px;
     height: 37px;
@@ -105,30 +117,43 @@
   }
 
   &--souvenirs::before {
-    // не понимаю, почему картинка немного обрезается снизу
     position: absolute;
-    top: -10px;
-    left: 10px;
+    top: -11px;
+    left: 15px;
     content: "";
     width: 39px;
     height: 37px;
     background-image: url("../../img/index/icon-gift.svg");
-    background-size: 100%;
+    background-size: 80%;
     background-repeat: no-repeat;
   }
 
+  &:nth-of-type(1) {
+    order: 1;
+  }
+
+  &:nth-of-type(2) {
+    order: 3;
+  }
+
+  &:nth-of-type(3) {
+    order: 2;
+  }
+
   @media (min-width: @tablet-width) {
+    width: 185px;
+
     &--house::before {
-      top: 20px;
-      left: 50%;
+      top: 25px;
+      left: 58%;
       transform: translateX(-50%);
       width: 72px;
       height: 75px;
     }
 
     &--food::before {
-      top: 20px;
-      left: 50%;
+      top: 25px;
+      left: 64%;
       transform: translateX(-50%);
       width: 76px;
       height: 68px;
@@ -136,38 +161,134 @@
 
     &--souvenirs::before {
       top: 20px;
-      left: 50%;
+      left: 65%;
       transform: translateX(-50%);
       width: 64px;
       height: 75px;
+      background-size: 100%;
     }
+
+    &:nth-of-type(1) {
+      order: 1;
+    }
+
+    &:nth-of-type(2) {
+      order: 2;
+    }
+
+    &:nth-of-type(3) {
+      order: 3;
+    }
+
+    // &:nth-of-type(3) > p {
+    //   width: 195px;
+    // }
+  }
+
+  @media (min-width: @desktop-width) {
+    &--house::before {
+      top: 23px;
+      left: 57%;
+      transform: translateX(-50%);
+      width: 72px;
+      height: 75px;
+    }
+
+    &--food::before {
+      top: 25px;
+      left: 62%;
+      transform: translateX(-50%);
+      width: 76px;
+      height: 68px;
+    }
+
+    &--souvenirs::before {
+      top: 19px;
+      left: 62%;
+      transform: translateX(-50%);
+      width: 64px;
+      height: 75px;
+      background-size: 100%;
+    }
+  }
+}
+
+.features-sublist__item--house {
+  @media (min-width: @tablet-width) {
+    padding-left: 36px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 300px;
+    padding-left: 50px;
+  }
+}
+
+.features-sublist__item--house .features-sublist__item-title,
+.features-sublist__item--food .features-sublist__item-title {
+  @media (min-width: @tablet-width) {
+    padding-left: 19px;
+  }
+}
+
+.features-sublist__item--food {
+  @media (min-width: @tablet-width) {
+    width: 180px;
+    padding-left: 73px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 300px;
+    padding-left: 101px;
+  }
+}
+
+.features-sublist__item--souvenirs {
+  @media (min-width: @tablet-width) {
+    padding-left: 67px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 300px;
+    padding-left: 99px;
+  }
+}
+
+.features-sublist__item--souvenirs .features-sublist__item-title {
+  @media (min-width: @desktop-width) {
+    padding-left: 19px;
   }
 }
 
 .features-sublist__item-title {
-  padding-left: 60px;
+  padding-left: 58px;
   font-size: 18px;
   margin: 0;
 
   @media (min-width: @tablet-width) {
-    padding: 120px 20px 0;
+    padding: 121px 20px 0 35px;
     font-size: 21px;
     line-height: 26px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 120px 20px 0 35px;
   }
 }
 
 .features-sublist .features-sublist__item p {
-  padding: 10px 0 10px 60px;
+  padding: 20px 10px 27px 58px;
 
   @media (min-width: @tablet-width) {
-    padding: 20px 20px;
+    padding: 23px 2px 13px 2px;
     font-size: 14px;
     line-height: 21px;
+  }
 
-    &:nth-of-type(2) {
-      // что-то ему не нравится, не хочет рабоать ???
-      padding: 20px 35px;
-    }
+  @media (min-width: @desktop-width) {
+    padding: 23px 2px 13px 2px;
+    font-size: 14px;
+    line-height: 21px;
   }
 }
 
@@ -176,7 +297,7 @@
   padding: 0;
 
   &:nth-last-child(-n+3) {
-    padding: 25px 15px;
+    padding: 27px 15px 25px;
     margin: 0 20px;
 
     &:not(:nth-last-child(1)) {
@@ -214,17 +335,18 @@
   display: block;
 
   @media (min-width: @tablet-width) {
+    height: 256px;
     width: 100%;
   }
 }
 
 .features-list__info {
   position: relative;
-  padding: 40px 0;
+  padding: 22px 0 35px;
 
   @media (min-width: @tablet-width) {
     width: 33.3333%;
-    padding: 40px 0;
+    padding: 25px 0 40px;
 
     &:first-of-type::after {
       display: none;
@@ -232,9 +354,36 @@
   }
 }
 
+.features-list__info .features-list__item-title {
+  @media (min-width: @tablet-width) {
+    padding: 18px 50px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 25px 50px 0;
+  }
+}
+
+// .features-list__item--big .features-list__info p {
+//   @media (min-width: @desktop-width) {
+//     padding-left: 100px;
+//     padding-right: 100px;
+//   }
+// }
+
+.features-list__info--traingle .features-list__item-title {
+  @media (min-width: @tablet-width) {
+    padding: 18px 30px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 18px 120px 0;
+  }
+}
+
 .features-list__wrapper {
   @media (min-width: @tablet-width) {
-    padding: 40px 30px;
+    padding: 42px 30px;
   }
 }
 
@@ -256,11 +405,15 @@
   }
 
   @media (min-width: @tablet-width) {
-    // padding: 40px 0;
+    padding: 22px 0 0;
 
     &:first-of-type::after {
       display: none;
     }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 28px 0 0;
   }
 }
 
@@ -271,12 +424,35 @@
 
   &::after {
     display: flex;
-    margin-top: 26px;
+    margin-top: 15px;
     counter-increment: section;
     content: " — №"counter(section) " —";
     font-size: 14px;
     font-weight: normal;
     justify-content: center;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 0 20px;
+    font-size: 21px;
+    line-height: 26px;
+
+    &::after {
+      margin-top: 10px;
+    }
+  }
+}
+
+
+.features-list__item--min .features-list__wrapper p {
+  @media (min-width: @tablet-width) {
+    padding: 21px 10px 0;
+  }
+}
+
+.features-list__item--min .features-list__item-title {
+  @media (min-width: @desktop-width) {
+    padding: 0 95px;
   }
 }
 
@@ -284,13 +460,13 @@
   font-size: inherit;
   line-height: 21px;
   margin: 0;
-  padding: 30px 0 0;
+  padding: 16px 0 0;
 
   @media (min-width: @tablet-width) {
-    padding: 30px 0 0;
+    padding: 21px 30px 0;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 30px 20px 0;
+    padding: 21px 69px 0;
   }
 }
