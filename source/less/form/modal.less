@@ -1,0 +1,125 @@
+.modal--done {
+  // display: block;
+  position: absolute;
+  width: 320px;
+  top: 1870px;
+  left: 0;
+  background-color: @basic-white;
+  box-shadow: 0 7px 15px @shadow-form;
+
+  @media (min-width: @tablet-width) {
+    width: 640px;
+    top: 1270px;
+    left: 50%;
+    transform: translate(-50%);
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 1120px;
+  }
+}
+
+.modal__message {
+  margin: 0;
+  padding: 20px 18px 21px;
+}
+
+.modal__message--title {
+  font-size: 18px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 34px;
+    font-size: 30px;
+  }
+}
+
+.modal__message--content {
+  padding-top: 5px;
+  line-height: 24px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 13px;
+  }
+}
+
+.modal--button-wrapper {
+  margin: 0;
+  padding: 45px 0 44px;
+  background-color: @basic-grey;
+}
+
+.modal__button {
+  width: 280px;
+  height: 58px;
+  padding-top: 10px;
+  font-size: 18px;
+  background-color: @accent-color;
+  border: none;
+
+  @media (min-width: @tablet-width) {
+    width: 458px;
+    padding-top: 18px;
+    font-size: 21px;
+  }
+}
+
+.modal--error {
+  // display: none;
+  position: absolute;
+  width: 320px;
+  top: 1545px;
+  left: 0;
+  padding-bottom: 35px;
+  background-color: @basic-white;
+  box-shadow: 0 7px 15px @shadow-form;
+
+  @media (min-width: @tablet-width) {
+    width: 400px;
+    top: 1430px;
+    padding-bottom: 48px;
+    left: 50%;
+    transform: translate(-50%);
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 1390px;
+    padding-bottom: 48px;
+  }
+}
+
+.modal--error .modal__message .modal__message--content {
+  padding: 16px 25px 0;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 27px;
+  }
+}
+
+.modal--error .modal__message {
+  margin: 0;
+  padding-bottom: 12px;
+
+  @media (min-width: @tablet-width) {
+    padding: 40px 30px;
+  }
+}
+
+.modal--error .modal__message--title {
+  @media (min-width: @tablet-width) {
+    width: 250px;
+    padding-left: 44px;
+    padding-top: 12px;
+    padding-bottom: 0;
+    line-height: 37px;
+  }
+}
+
+.modal--error .modal__button {
+  width: 180px;
+  padding-top: 0;
+
+  @media (min-width: @tablet-width) {
+    width: 272px;
+    padding-top: 17px;
+  }
+}

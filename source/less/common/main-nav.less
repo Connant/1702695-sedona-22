@@ -154,10 +154,32 @@
   }
 }
 
-.main-nav__toggle {
+.main-nav__close {
   display: none;
   position: absolute;
   border: none;
   outline: none;
   cursor: pointer;
+  background-color: transparent;
+  top: 14px;
+  right: 12px;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.main-nav__open {
+  display: none;
+  position: absolute;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  top: 239px;
+  right: 13px;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }

@@ -5,6 +5,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="fonts/ptsans.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/ptsansbold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <title>Фото и видео о Седоне</title>
 </head>
 
@@ -14,13 +16,28 @@
 
     <header class="page-header">
       <nav class="main-nav">
-        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        <button class="main-nav__close" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+          <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M22.2 2.8L19.4 0L11.1 8.3L2.8 0L0 2.8L8.3 11.1L0 19.4L2.8 22.2L11.1 13.9L19.4 22.2L22.2 19.4L13.9 11.1L22.2 2.8Z"
+              fill="white" />
+          </svg>
+        </button>
         <ul class="main-nav-list">
           <li class="main-nav__item"><a href="index.html">Главная</a></li>
           <li class="main-nav__item"><a>Фото и видео</a></li>
           <li class="main-nav__item"><a href="form.html">Форма отзыва</a></li>
           <li class="main-nav__item"><a href="https://htmlacademy.ru/study">HTML ACADEMY</a></li>
         </ul>
+        <button class="main-nav__open" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+          <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22.9 0H0V4H22.9V0Z" fill="#81B3D2" />
+            <path d="M22.9 9H0V13H22.9V9Z" fill="#81B3D2" />
+            <path d="M22.9 18H0V22H22.9V18Z" fill="#81B3D2" />
+          </svg>
+        </button>
         <a href="index.html">
           <picture>
             <source media="(min-width: 1199px)" srcset="./img/header/desktop/logo-desktop.svg">
@@ -51,12 +68,15 @@
         <ul class="photo-list">
 
           <li class="photo-list__item card">
-            <picture>
-              <source media="(min-width: 768px)" srcset="./img/catalog/photo1-desktop.jpg 1x, ./img/catalog/photo1-desktop@2.jpg 2x">
-              <img class="card card--img card--img-first" src="./img/catalog/photo-1-mobile.jpg"
-                srcset="./img/catalog/photo-1-mobile.jpg 1x, ./img/catalog/photo-1-mobile@2.jpg 2x"
-                alt="Неродные просторы" width="280" height="280">
-            </picture>
+            <a class="card card--link" href="#">
+              <picture>
+                <source media="(min-width: 768px)"
+                  srcset="./img/catalog/photo1-desktop.jpg 1x, ./img/catalog/photo1-desktop@2.jpg 2x">
+                <img class="card card--img card--img-first" src="./img/catalog/photo-1-mobile.jpg"
+                  srcset="./img/catalog/photo-1-mobile.jpg 1x, ./img/catalog/photo-1-mobile@2.jpg 2x"
+                  alt="Неродные просторы" width="280" height="280">
+              </picture>
+            </a>
             <div class="card card--description">
               <div class="card card--description-wrapper">
                 <h3 class="card card--title">Неродные просторы</h3>
@@ -76,13 +96,15 @@
           </li>
 
           <li class="photo-list__item card">
-            <picture>
-              <source media="(min-width: 768px)"
-                srcset="./img/catalog/photo2-desktop.jpg 1x, ./img/catalog/photo2-desktop@2.jpg 2x">
-              <img class="card card--img card--img-secondary" src="./img/catalog/photo-2-mobile.jpg"
-                srcset="./img/catalog/photo-2-mobile.jpg 1x, ./img/catalog/photo-2-mobile@2.jpg 2x"
-                alt="Местная растительность" width="280" height="280">
-            </picture>
+            <a class="card card--link" href="#">
+              <picture>
+                <source media="(min-width: 768px)"
+                  srcset="./img/catalog/photo2-desktop.jpg 1x, ./img/catalog/photo2-desktop@2.jpg 2x">
+                <img class="card card--img card--img-secondary" src="./img/catalog/photo-2-mobile.jpg"
+                  srcset="./img/catalog/photo-2-mobile.jpg 1x, ./img/catalog/photo-2-mobile@2.jpg 2x"
+                  alt="Местная растительность" width="280" height="280">
+              </picture>
+            </a>
             <div class="card card--description card--description-secondary">
               <div class="card card--description-wrapper">
                 <h3 class="card card--title">Местная растительность</h3>
@@ -102,11 +124,15 @@
           </li>
 
           <li class="photo-list__item card">
-            <picture>
-              <source media="(min-width: 768px)" srcset="./img/catalog/photo3-desktop.jpg 1x, ./img/catalog/photo3-desktop@2.jpg 2x">
-              <img class="card card--img card--img-secondary" src="./img/catalog/photo-3-mobile.jpg"
-                srcset="./img/catalog/photo-3-mobile.jpg 1x, ./img/catalog/photo-3-mobile@2.jpg 2x" alt="Дорога на север" width="280" height="280">
-            </picture>
+            <a class="card card--link" href="#">
+              <picture>
+                <source media="(min-width: 768px)"
+                  srcset="./img/catalog/photo3-desktop.jpg 1x, ./img/catalog/photo3-desktop@2.jpg 2x">
+                <img class="card card--img card--img-secondary" src="./img/catalog/photo-3-mobile.jpg"
+                  srcset="./img/catalog/photo-3-mobile.jpg 1x, ./img/catalog/photo-3-mobile@2.jpg 2x"
+                  alt="Дорога на север" width="280" height="280">
+              </picture>
+            </a>
             <div class="card card--description card--description-secondary">
               <div class="card card--description-wrapper">
                 <h3 class="card card--title">Дорога на север</h3>
@@ -126,11 +152,15 @@
           </li>
 
           <li class="photo-list__item card">
-            <picture>
-              <source media="(min-width: 768px)" srcset="./img/catalog/photo4-desktop.jpg 1x, ./img/catalog/photo4-desktop@2.jpg 2x">
-              <img class="card card--img card--img-secondary" src="./img/catalog/photo-4-mobile.jpg"
-                srcset="./img/catalog/photo-4-mobile.jpg 1x, ./img/catalog/photo-4-mobile@2.jpg 2x" alt="Мост Дьявола" width="280" height="280">
-            </picture>
+            <a class="card card--link" href="#">
+              <picture>
+                <source media="(min-width: 768px)"
+                  srcset="./img/catalog/photo4-desktop.jpg 1x, ./img/catalog/photo4-desktop@2.jpg 2x">
+                <img class="card card--img card--img-secondary" src="./img/catalog/photo-4-mobile.jpg"
+                  srcset="./img/catalog/photo-4-mobile.jpg 1x, ./img/catalog/photo-4-mobile@2.jpg 2x" alt="Мост Дьявола"
+                  width="280" height="280">
+              </picture>
+            </a>
             <div class="card card--description card--description-secondary">
               <div class="card card--description-wrapper">
                 <h3 class="card card--title">Мост Дьявола</h3>
@@ -164,9 +194,11 @@
         </div>
 
         <picture>
-          <source media="(min-width: 768px)" srcset="./img/catalog/video-desktop.jpg 1x, ./img/catalog/video-desktop@2.jpg 2x">
+          <source media="(min-width: 768px)"
+            srcset="./img/catalog/video-desktop.jpg 1x, ./img/catalog/video-desktop@2.jpg 2x">
           <img class="video__content" src="./img/catalog/video-mobile.jpg"
-            srcset="./img/catalog/video-mobile.jpg 1x, ./img/catalog/video-mobile@2.jpg 2x" alt="Видеообзор Седоны" width="320" height="201">
+            srcset="./img/catalog/video-mobile.jpg 1x, ./img/catalog/video-mobile@2.jpg 2x" alt="Видеообзор Седоны"
+            width="320" height="201">
         </picture>
 
         <div class="video__buttons controls">
@@ -234,8 +266,10 @@
           <a class="copyright__logo" href="https://up.htmlacademy.ru/adaptive/22"
             aria-label="Ссылка на сайт разработчика">
             <svg width="27" height="35" viewBox="0 0 27 35" xmlns="http://www.w3.org/2000/svg">
-              <path d="M13.6 0H13.5L0 1.4V26.1L13.5 34.1L26.9 26.1V1.4L13.6 0ZM25 12.1L13.5 5.3V5.2H13.4L13.3 5.1V5.2L1.9 12.1V3.1L13.4 1.9L25 3.1V12.1ZM13.4 6.8L24.9 13.5L20.4 16.1L13.3 11.9V13.3L19.2 16.8L18.3 17.3L13.3 14.3V15.7L17.1 18L16.3 18.5L13.3 16.7V18.1L15.2 19.2L13.4 20.3L2 13.6L13.4 6.8ZM1.9 15.1L13.3 21.9V22.9L5.4 18.2V19.6L13.4 24.4V25.5L5.4 20.8V22.2L13.4 27L21.5 22.1V16.9L24.9 14.9V24.9L13.4 31.8L1.9 25V15.1Z" fill="black"/>
-              </svg>
+              <path
+                d="M13.6 0H13.5L0 1.4V26.1L13.5 34.1L26.9 26.1V1.4L13.6 0ZM25 12.1L13.5 5.3V5.2H13.4L13.3 5.1V5.2L1.9 12.1V3.1L13.4 1.9L25 3.1V12.1ZM13.4 6.8L24.9 13.5L20.4 16.1L13.3 11.9V13.3L19.2 16.8L18.3 17.3L13.3 14.3V15.7L17.1 18L16.3 18.5L13.3 16.7V18.1L15.2 19.2L13.4 20.3L2 13.6L13.4 6.8ZM1.9 15.1L13.3 21.9V22.9L5.4 18.2V19.6L13.4 24.4V25.5L5.4 20.8V22.2L13.4 27L21.5 22.1V16.9L24.9 14.9V24.9L13.4 31.8L1.9 25V15.1Z"
+                fill="black" />
+            </svg>
           </a>
         </p>
       </div>
